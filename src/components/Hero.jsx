@@ -2,8 +2,10 @@ import React from "react";
 import { Box, Flex, Heading, Text, Stack, Button } from "@chakra-ui/react";
 import Image from "next/image";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { useMyContext } from "../contexts/Context";
 
 export function Hero() {
+  const { setIsModalOpen } = useMyContext();
   return (
     <Flex
       position="relative"
@@ -59,6 +61,7 @@ export function Hero() {
         </Text>
 
         <Button
+          onClick={() => setIsModalOpen(true)}
           mt={8}
           _hover={{ color: "white", bg: "amarelo" }}
           color="black"

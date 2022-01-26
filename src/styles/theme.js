@@ -34,10 +34,8 @@ export const theme = extendTheme({
       },
       body: {
         bg:'url(/bg-pattern.jpg)',
-        backgroundAttachment:"fixed"
-        /* bg: "var(--white)",
-        color: "var(--white)",
-        lineHeight: "inherit", */
+        backgroundAttachment:"fixed",
+        color:'white'
       },
       button: {
         // _focus: { outlineColor: "#f0f" },

@@ -9,6 +9,12 @@ import {
   HStack,
   Button,
   Wrap,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerBody,
+  useDisclosure,
 } from "@chakra-ui/react";
 import {
   FaArrowCircleRight,
@@ -32,6 +38,7 @@ import {
 } from "react-icons/fa";
 
 export function Cursos() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Flex
       flexDir="column"
@@ -79,6 +86,7 @@ export function Cursos() {
       </Flex>
       <Wrap justify="center" maxW={1200} spacing={8}>
         <Curso
+          onOpen={onOpen}
           titulo="FACEBOOK <br/> ADS"
           descricao="Aprenda como dominar os anúncios dentro do maior conglomerado de redes sociais do planeta."
           tempo="3 horas"
@@ -86,6 +94,7 @@ export function Cursos() {
           icone={<FaFacebookSquare size="50px" color="#12DDFF" />}
         />
         <Curso
+          onOpen={onOpen}
           titulo="GOOGLE <br/> ADS"
           descricao="Aprenda como dominar os anúncios dentro do maior site de buscas do planeta Terra."
           tempo="3 horas"
@@ -93,6 +102,7 @@ export function Cursos() {
           icone={<FaGoogle size="50px" color="#12DDFF" />}
         />
         <Curso
+          onOpen={onOpen}
           titulo="YOUTUBE <br/> ADS"
           descricao="Aprenda como dominar os anúncios dentro da maior rede de conteúdo em vídeos do mundo."
           tempo="1 horas"
@@ -100,6 +110,7 @@ export function Cursos() {
           icone={<FaYoutube size="50px" color="#12DDFF" />}
         />
         <Curso
+          onOpen={onOpen}
           titulo="LINKEDIN <br/> ADS"
           descricao="Aprenda como dominar anúncios para captação de empresas na maior rede B2B do mundo."
           tempo="2 horas"
@@ -107,6 +118,7 @@ export function Cursos() {
           icone={<FaLinkedin size="50px" color="#12DDFF" />}
         />
         <Curso
+          onOpen={onOpen}
           titulo="TIKTOK <br/> ADS"
           descricao="Aprenda como dominar anúncios na rede social que mais cresce e viraliza em 2022.."
           tempo="1 horas"
@@ -114,6 +126,7 @@ export function Cursos() {
           icone={<FaTiktok size="50px" color="#12DDFF" />}
         />
         <Curso
+          onOpen={onOpen}
           titulo="REDATOR <br/> COPYWRITING"
           descricao="Domine as técnicas milionárias de escrita persuasiva e encante seu cliente gerando vendas."
           tempo="2 horas"
@@ -121,6 +134,7 @@ export function Cursos() {
           icone={<FaPen size="50px" color="#12DDFF" />}
         />
         <Curso
+          onOpen={onOpen}
           titulo="GA4: GOOGLE <br/> ANALYTICS "
           descricao="Aprenda como metrificar a origem de qualquer conversão em seu site e otimize seus resultados."
           tempo="2 horas"
@@ -128,6 +142,7 @@ export function Cursos() {
           icone={<FaChartBar size="50px" color="#12DDFF" />}
         />
         <Curso
+          onOpen={onOpen}
           titulo="GTM: GOOGLE TAG MANAGER "
           descricao="Aprenda como inserir pixels e tags de forma automatizada, além de criar eventos personalizados."
           tempo="2 horas"
@@ -135,6 +150,7 @@ export function Cursos() {
           icone={<FaTag size="50px" color="#12DDFF" />}
         />
         <Curso
+          onOpen={onOpen}
           titulo="GOOGLE DATA<br/>STUDIO "
           descricao="Aprenda como construir relatórios e dashboards personalizados e com design acima da média."
           tempo="2 horas"
@@ -142,6 +158,7 @@ export function Cursos() {
           icone={<FaDatabase size="50px" color="#12DDFF" />}
         />
         <Curso
+          onOpen={onOpen}
           titulo="GESTOR DE TRÁFEGO PARA LANÇAMENTO "
           descricao="Aprenda como gerar tráfego para lançamentos semente e internos e gerar picos de vendas."
           tempo="3 horas"
@@ -149,6 +166,7 @@ export function Cursos() {
           icone={<FaRocket size="50px" color="#12DDFF" />}
         />
         <Curso
+          onOpen={onOpen}
           titulo="GESTOR DE TRÁFEGO PERPÉTUO"
           descricao="Aprenda como gerar tráfego para produtos que vendem todo santo dia, e tenha previsibilidade."
           tempo="2 horas"
@@ -156,6 +174,7 @@ export function Cursos() {
           icone={<FaSortAmountUp size="50px" color="#12DDFF" />}
         />
         <Curso
+          onOpen={onOpen}
           titulo="GESTOR DE TRÁFEGO PARA NEGÓCIOS"
           descricao="Aprenda como anunciar para negócios corporativos e locais de qualquer nicho e porte."
           tempo="3 horas"
@@ -163,6 +182,7 @@ export function Cursos() {
           icone={<FaHome size="50px" color="#12DDFF" />}
         />
         <Curso
+          onOpen={onOpen}
           titulo="GESTOR DE TRÁFEGO PARA DELIVERY"
           descricao="Use tráfego pago para causar uma avalanches de pedidos na seu bairro ou cidade."
           tempo="2 horas"
@@ -170,6 +190,7 @@ export function Cursos() {
           icone={<FaMotorcycle size="50px" color="#12DDFF" />}
         />
         <Curso
+          onOpen={onOpen}
           titulo="GESTOR DE TRÁFEGO PARA ECOMMERCE"
           descricao="Aprenda como criar campanhas de tráfego para catálogos de produtos no facebook e google."
           tempo="3 horas"
@@ -177,6 +198,7 @@ export function Cursos() {
           icone={<FaShoppingCart size="50px" color="#12DDFF" />}
         />
         <Curso
+          onOpen={onOpen}
           titulo="CONSTRUTOR DE FUNIS DE VENDAS"
           descricao="Aprenda os fundamentos para construir funis de vendas e vender literalmente qualquer produto."
           tempo="2 horas"
@@ -184,6 +206,26 @@ export function Cursos() {
           icone={<FaFunnelDollar size="50px" color="#12DDFF" />}
         />
       </Wrap>
+      <Drawer
+        autoFocus={false}
+        returnFocusOnClose={false}
+        isOpen={isOpen}
+        placement="left"
+        onClose={onClose}
+        size="sm"
+      >
+        <DrawerOverlay backdropFilter="blur(3px)" />
+        <DrawerContent bg="gray.800">
+          <DrawerCloseButton m={3} />
+
+          <DrawerBody pt={8} onClick={onClose}>
+            <VStack>
+              <Text>Dados do curso selecionado</Text>
+              <Text>Em construção</Text>
+            </VStack>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
     </Flex>
   );
 }
@@ -218,6 +260,8 @@ export const Curso = (props) => (
       <Text>{props.aulas}</Text>
     </HStack>
     <Button
+      aria-label="Abrir menu de navegação"
+      onClick={props.onOpen}
       variant="outline"
       _hover={{ color: "white", bg: "amarelo", border: "none" }}
       color="azul"

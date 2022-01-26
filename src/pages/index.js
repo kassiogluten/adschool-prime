@@ -29,6 +29,7 @@ export default function Home() {
         />
         <meta property="og:image" content="/logo.png" key="ogimage" />
       </Head>
+      {/* <Header/> */}
       <Hero />
       <Cursos />
       <CTA />

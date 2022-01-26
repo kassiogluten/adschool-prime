@@ -14,11 +14,12 @@ import {
   Button,
   Center,
 } from "@chakra-ui/react";
-import {
-  FaRegCheckCircle,
-} from "react-icons/fa";
+import { FaRegCheckCircle } from "react-icons/fa";
+
+import { useMyContext } from "../contexts/Context";
 
 export function Preco() {
+  const { setIsModalOpen } = useMyContext();
   return (
     <Flex
       flexDir="column"
@@ -132,6 +133,7 @@ export function Preco() {
             </ListItem>
           </List>
           <Button
+            onClick={() => setIsModalOpen(true)}
             my={8}
             p={6}
             colorScheme="none"
