@@ -1,13 +1,32 @@
 @font-face {
-  font-family: "CaviarDreams";
-  src: url("CaviarDreams.ttf") format("truetype"),
-      url("CaviarDreams.otf") format("otf");
+  font-family: "OrkneyLight";
+  src: url("OrkneyLight.ttf") format("truetype"),
+    url("OrkneyLight.otf") format("otf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "OrkneyRegular";
+  src: url("OrkneyRegular.ttf") format("truetype"),
+    url("OrkneyRegular.otf") format("otf");
   font-weight: 400;
 }
 @font-face {
-  font-family: "CaviarDreams";
-  src: url("CaviarDreamsBold.ttf") format("truetype"),
-      url("CaviarDreamsBold.otf") format("otf");
+  font-family: "OrkneyMedium";
+  src: url("OrkneyMedium.ttf") format("truetype"),
+    url("OrkneyMedium.otf") format("otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "OrkneyBold";
+  src: url("OrkneyBold.ttf") format("truetype"),
+    url("OrkneyBold.otf") format("otf");
   font-weight: 700;
 }
 
+/* @font-face {
+  font-family: "OrkneyBold";
+  src: url("OrkneyBold.ttf") format("truetype"),
+    url("OrkneyBold.otf") format("otf");
+  font-weight: 400;
+}
+ */

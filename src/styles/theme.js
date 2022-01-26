@@ -1,46 +1,47 @@
-import { extendTheme } from "@chakra-ui/react";
+import { background, extendTheme } from "@chakra-ui/react";
 
 export const theme = extendTheme({
   initialColorMode: "dark",
   useSystemColorMode: false,
   fonts: {
-    heading: "Roboto",
-    body: "Roboto",
-    // heading: "CaviarDreams",
-    // body: "CaviarDreams",
+    heading: "OrkneyBold, no-serif",
+    body: "OrkneyLight",
   },
   colors: {
-    rosaxoq: "#ff00ff",
+    azul: "#12DDFF",
+    amarelo: "#F7B500",
+    cinza: "#CEC5C5",
   },
   components: {
     Button: {
       baseStyle: {
-        _hover: {
-          // textDecoration: "underline",
-        },
-        
+        rounded: "full",
+        fontFamily: "OrkneyMedium",
+        fontSize: "15px",
       },
     },
   },
   styles: {
     global: {
-      // svg: {
-      //   display: "inline",
-      //   lineHeight: "1",
-      // },
+      svg: {
+        display: "inline",
+        lineHeight: "1",
+      },
       a: {
         _hover: {
           //textDecoration: "underline",
         },
       },
       body: {
+        bg:'url(/bg-pattern.jpg)',
+        backgroundAttachment:"fixed"
         /* bg: "var(--white)",
         color: "var(--white)",
         lineHeight: "inherit", */
       },
-      button:{
-        _focus: { outlineColor: "#00000011" },
-      }
+      button: {
+        // _focus: { outlineColor: "#f0f" },
+      },
     },
   },
 });

@@ -22,6 +22,7 @@ import { FaMoon, FaSun, FaThList } from "react-icons/fa";
 import { FiMoon, FiSun } from "react-icons/fi";
 import React from "react";
 import { LogoSvg } from "../icons";
+import Image from "next/image";
 
 export function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -34,7 +35,7 @@ export function Header() {
         maxW={1200}
         justify="space-between"
       >
-        <LogoSvg />
+        <Image alt="Logo Adschool" src="/logo.png" width={70} height={17} />
         <HStack display={{ base: "none", sm: "flex" }} spacing={10}>
           <Menu />
         </HStack>
