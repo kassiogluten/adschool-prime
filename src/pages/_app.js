@@ -3,7 +3,10 @@ import { theme } from "../styles/theme";
 import { ContextProvider } from "../contexts/Context";
 
 import { ChakraProvider } from "@chakra-ui/react";
+import { useEffect } from "react";
 function MyApp({ Component, pageProps }) {
+
+
   return (
     <ChakraProvider theme={theme}>
       <ContextProvider>

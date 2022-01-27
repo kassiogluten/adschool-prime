@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Flex,
   Text,
@@ -38,13 +38,45 @@ export function CTA() {
           ME INSCREVER
         </Text>
       </Button>
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <ModalOverlay />
-        <ModalContent h={300} bg="gray.800">
-          <ModalCloseButton />
-          <ModalBody>Formulário em construção</ModalBody>
-        </ModalContent>
-      </Modal>
+      <Formulario />
     </Flex>
   );
 }
+
+const Formulario = () => {
+  const { isModalOpen, setIsModalOpen } = useMyContext();
+
+  function notificacao() {
+    console.log("render form");
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function () {
+      OneSignal.init({
+        appId: "de1f8fb1-9d7d-4828-bfbc-60c5dea86910",
+        autoRegister: true,
+        autoResubscribe: true,
+        notifyButton: {
+          enable: true,
+          prenotify: true,
+        },
+
+        allowLocalhostAsSecureOrigin: true,
+      });
+    });
+
+    return () => {
+      window.OneSignal = undefined;
+    };
+  }
+
+  return (
+    <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+      <ModalOverlay />
+      <ModalContent h={300} bg="gray.800">
+        <ModalCloseButton />
+        <ModalBody>
+          Formulário em construção <Button onClick={notificacao}>Testar</Button>
+        </ModalBody>
+      </ModalContent>
+    </Modal>
+  );
+};

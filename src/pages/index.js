@@ -14,6 +14,7 @@ import { Vagas } from "../components/Vagas";
 import { VoceVaiAprender } from "../components/VoceVaiAprender";
 
 export default function Home() {
+  
   return (
     <>
       <Head>
@@ -28,6 +29,10 @@ export default function Home() {
           content="Transformamos jovens em anunciantes profissionais e conectamos com o mercado​"
         />
         <meta property="og:image" content="/logo.png" key="ogimage" />
+        <script
+          src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"
+          async=""
+        ></script>
       </Head>
       {/* <Header/> */}
       <Hero />
@@ -36,16 +41,15 @@ export default function Home() {
       <Mensagens />
       <VoceVaiAprender />
       <CTA />
-      <Vagas/>
+      <Vagas />
       <CTA />
-      <Equipe/>
-      <Comunidade/>
-      <Preco/>
-      <Garantia/>
-      <Depoimentos/>
+      <Equipe />
+      <Comunidade />
+      <Preco />
+      <Garantia />
+      <Depoimentos />
       <CTA />
-      <Footer/>
-
+      <Footer />
     </>
   );
 }
