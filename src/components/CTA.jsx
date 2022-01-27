@@ -1,19 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, {  } from "react";
 import {
   Flex,
   Text,
   Button,
-  ModalOverlay,
-  Modal,
-  ModalContent,
-  ModalBody,
-  ModalCloseButton,
-  Center,
-  Input,
-  Heading,
 } from "@chakra-ui/react";
-import { FaArrowCircleRight, FaLongArrowAltRight } from "react-icons/fa";
+import { FaLongArrowAltRight } from "react-icons/fa";
 import { useMyContext } from "../contexts/Context";
+import { Formulario } from "./Formulario";
 
 export function CTA() {
   function notificacao() {
@@ -50,7 +43,8 @@ export function CTA() {
     });
     setIsModalOpen(true);
   }
-  const { isModalOpen, setIsModalOpen } = useMyContext();
+
+  const { setIsModalOpen } = useMyContext();
   return (
     <Flex
       flexDir="column"
@@ -79,65 +73,3 @@ export function CTA() {
     </Flex>
   );
 }
-
-const Formulario = ({ notificacao }) => {
-  const { isModalOpen, setIsModalOpen } = useMyContext();
-  /* 
-  useEffect(() => {
-
-  }, []); */
-
-  const [nome, setNome] = useState("");
-  const [email, setEmail] = useState("");
-  const [telefone, setTelefone] = useState("");
-  const invalido = !nome || !email || !telefone;
-  return (
-    <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-      <ModalOverlay />
-      <ModalContent py={4} bg="gray.800">
-        <ModalCloseButton />
-        <ModalBody as={Center} flexDir="column">
-          <Heading align="center" color="azul">
-            Inscrição Adschool Prime
-          </Heading>
-          <Text mb={4} align="center" color="white">
-            Uma única assinatura: Todos os treinamentos. Certificado Físico.
-            Conexão com vagas de emprego. Gestor de contas. Suporte por chat… e
-            muito mais. Preencha os dados para continuar:
-          </Text>
-          <Input
-            my={2}
-            value={nome}
-            onChange={(e) => setNome(e.target.value)}
-            placeholder="Digite seu nome"
-          />
-          <Input
-            my={2}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Digite seu email principal"
-          />
-          <Input
-            my={2}
-            value={telefone}
-            onChange={(e) => setTelefone(e.target.value)}
-            placeholder="Digite seu Whatsapp"
-          />
-          <Button
-            disabled={invalido}
-            _hover={{ color: "white" }}
-            mt={4}
-            w="full"
-            bg="azul"
-            color="black"
-            onClick={notificacao}
-          >
-            {invalido ? "Preencha os 3 campos" : "CONTINUAR"}
-          </Button>
-
-          {/* <div className="onesignal-customlink-container"></div> */}
-        </ModalBody>
-      </ModalContent>
-    </Modal>
-  );
-};
