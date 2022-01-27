@@ -60,7 +60,7 @@ export const Formulario = ({ notificacao }) => {
             setNome("");
             setEmail("");
             setTelefone("");
-            window.location.href = "https://hotmart.com";
+            window.location.href = "https://pay.greenn.com.br/2410";
           } else {
             alert(data.erro || "Erro, não foi possível fazer sua inscrição");
           }
