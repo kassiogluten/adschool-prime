@@ -18,7 +18,6 @@ export default function Custom404() {
       <Head>
         <title>ERRO 404</title>
       </Head>
-      <Header />
       <Box align="center" w="100%" >
         <Flex
           p="5rem 1rem"

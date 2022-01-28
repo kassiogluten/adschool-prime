@@ -16,7 +16,7 @@ export function CTA() {
       OneSignal.init({
         // appId: "cddc769c-4db1-4950-acba-ce6833641a55",
         appId: "de1f8fb1-9d7d-4828-bfbc-60c5dea86910",
-        safari_web_id: "",
+        safari_web_id: "web.onesignal.auto.504512c8-952a-4d80-9d02-48e16e3cc659",
         autoRegister: true,
         autoResubscribe: true,
         // promptOptions: {

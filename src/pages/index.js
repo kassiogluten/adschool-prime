@@ -36,7 +36,7 @@ export default function Home() {
       </Head>
       {/* <Header/> */}
       <Hero />
-      <Cursos />
+      {/* <Cursos /> */}
       <CTA />
       <Mensagens />
       <VoceVaiAprender />
