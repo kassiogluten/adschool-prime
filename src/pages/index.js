@@ -1,12 +1,11 @@
 import Head from "next/head";
 import { Comunidade } from "../components/Comunidade";
 import { CTA } from "../components/CTA";
-import { Cursos } from "../components/Cursos";
+import { Cursos } from "../components/Cursos.jsx";
 import { Depoimentos } from "../components/Depoimentos";
 import { Equipe } from "../components/Equipe";
 import { Footer } from "../components/Footer";
 import { Garantia } from "../components/Garantia";
-import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
 import { Mensagens } from "../components/Mensagens";
 import { Preco } from "../components/Preco";
@@ -34,9 +33,8 @@ export default function Home() {
           async=""
         ></script>
       </Head>
-      {/* <Header/> */}
       <Hero />
-      {/* <Cursos /> */}
+      <Cursos />
       <CTA />
       <Mensagens />
       <VoceVaiAprender />
