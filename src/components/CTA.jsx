@@ -14,7 +14,8 @@ export function CTA() {
     window.OneSignal = window.OneSignal || [];
     OneSignal.push(function () {
       OneSignal.init({
-        appId: "cddc769c-4db1-4950-acba-ce6833641a55",
+        // appId: "cddc769c-4db1-4950-acba-ce6833641a55",
+        appId: "de1f8fb1-9d7d-4828-bfbc-60c5dea86910",
         safari_web_id: "",
         autoRegister: true,
         autoResubscribe: true,

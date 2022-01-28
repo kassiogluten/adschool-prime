@@ -145,7 +145,7 @@ export const Formulario = ({ notificacao }) => {
                 </AlertDescription>
                 <Progress size="xs" isIndeterminate />
               </Box>
-              <CloseButton />
+              <CloseButton onClick={() => setMessage(false)} />
             </Alert>
           )}
 
