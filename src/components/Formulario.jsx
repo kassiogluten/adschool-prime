@@ -92,7 +92,7 @@ export const Formulario = ({ notificacao }) => {
           <Input
             bg="white"
             color="black"
-            _placeholder={{ color: "gray.300" }}
+            _placeholder={{ color: "gray.400" }}
             mb={2}
             value={nome}
             onChange={(e) => setNome(e.target.value)}
@@ -104,7 +104,7 @@ export const Formulario = ({ notificacao }) => {
           <Input
             bg="white"
             color="black"
-            _placeholder={{ color: "gray.300" }}
+            _placeholder={{ color: "gray.400" }}
             mb={2}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -116,7 +116,7 @@ export const Formulario = ({ notificacao }) => {
           <Input
             bg="white"
             color="black"
-            _placeholder={{ color: "gray.300" }}
+            _placeholder={{ color: "gray.400" }}
             mb={2}
             value={telefone}
             onChange={(e) => setTelefone(e.target.value)}

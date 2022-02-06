@@ -49,7 +49,7 @@ export function Garantia() {
             justify="flex-start"
             w="full"
           >
-            <Box w={4} h={4} borderRadius="50%" bg="amarelo" />
+            <Box minW={4} h={4} borderRadius="50%" bg="amarelo" />
             <Text
               fontFamily="OrkneyRegular"
               letterSpacing="3px"

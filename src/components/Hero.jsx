@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Flex, Heading, Text, Stack, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Stack,
+  Button,
+  filter,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { useMyContext } from "../contexts/Context";
@@ -13,9 +21,19 @@ export function Hero() {
       justify="center"
       align="center"
       w="100%"
-      bg="#00000077"
+      bg="#0f00f077"
+      zIndex={2}
     >
+      <Box
+        left={0}
+        zIndex={1}
+        w="full"
+        h="100%"
+        pos="absolute"
+        bgColor="#00000077"
+      />
       <Image
+        zIndex={1}
         objectPosition="left top"
         objectFit="cover"
         alt="AdSchool"
@@ -37,7 +55,8 @@ export function Hero() {
           align="center"
           spacing={2}
           pt={4}
-          direction={{ base: "column", sm: "row" }}
+          direction="row"
+          // direction={{ base: "column", sm: "row" }}
           justify="center"
         >
           <Box w={4} h={4} borderRadius="50%" bg="amarelo" />

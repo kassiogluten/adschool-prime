@@ -103,12 +103,12 @@ export function CursosPreview() {
 
         <Stack
           align="center"
-          direction={{ base: "column", sm: "row" }}
+          direction="row"
           py={8}
           spacing={2}
           justify="center"
         >
-          <Box w={4} h={4} borderRadius="50%" bg="amarelo" />
+          <Box minW={4} h={4} borderRadius="50%" bg="amarelo" />
           <Text
             fontFamily="OrkneyRegular"
             letterSpacing="3px"

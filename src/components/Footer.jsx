@@ -10,7 +10,6 @@ export function Footer() {
       justify="center"
       align="center"
       w="100%"
-      overflow="hidden"
     >
       <Flex p="2rem 1rem" align="center" maxW={1000} w="full" flexDir="column">
         <Image alt="Pagamento" src="/pagamento.png" width={450} height={30} />
@@ -21,6 +20,7 @@ export function Footer() {
         </Text>
         <Image alt="Logo Adschool" src="/logo.png" width={70} height={17} />
       </Flex>
+
     </Flex>
   );
 }
