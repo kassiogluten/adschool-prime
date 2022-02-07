@@ -14,6 +14,7 @@ import { VoceVaiAprender } from "../components/VoceVaiAprender";
 
 import { request } from "graphql-request";
 import { WhatsappButton } from "../components/WhatsappButton";
+import Script from "next/script";
 
 export default function Home({ cursos }) {
   return (
@@ -49,6 +50,7 @@ export default function Home({ cursos }) {
       <Garantia />
       <Depoimentos />
       <CTA />
+
       <Footer />
       <WhatsappButton />
     </>

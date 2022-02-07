@@ -124,13 +124,9 @@ export function Preco() {
             <Divider bg="#555" my={2} w="full" />
             <ListItem>
               <ListIcon as={FaRegCheckCircle} />
-              Suporte via Chat
+              Acesso à comunidade e suporte
             </ListItem>
-            <Divider bg="#555" my={2} w="full" />
-            <ListItem>
-              <ListIcon as={FaRegCheckCircle} />
-              Gestor de Contas Individual
-            </ListItem>
+
           </List>
           <Button
             onClick={() => setIsModalOpen(true)}

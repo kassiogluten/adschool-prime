@@ -43,19 +43,19 @@ export function Comunidade() {
       icone: FaTools,
     },
 
-    {
-      titulo: "Gestor de Contas Individual",
-      descricao:
-        "Gere economia pagando um único valor anual para acessar todos os treinamentos. Sem pegadinha.",
-      icone: FaUserTie,
-    },
+    // {
+    //   titulo: "Gestor de Contas Individual",
+    //   descricao:
+    //     "Gere economia pagando um único valor anual para acessar todos os treinamentos. Sem pegadinha.",
+    //   icone: FaUserTie,
+    // },
 
-    {
-      titulo: "Suporte semanal via chat",
-      descricao:
-        "Todos os nossos alunos certificados, sem excessão, são encaminhados para empresas e startups.",
-      icone: FaRocketchat,
-    },
+    // {
+    //   titulo: "Suporte semanal via chat",
+    //   descricao:
+    //     "Todos os nossos alunos certificados, sem excessão, são encaminhados para empresas e startups.",
+    //   icone: FaRocketchat,
+    // },
 
     {
       titulo: "Certificado Físico Adschool",
@@ -72,18 +72,18 @@ export function Comunidade() {
     },
 
     {
-      titulo: "Comunidade de alunos",
+      titulo: "Comunidade de alunos e suporte",
       descricao:
         "Somos uma comunidade de jovens anunciantes que produzem networkin com grandes empresas e CEO’s.",
       icone: FaSitemap,
     },
 
-    {
-      titulo: "Imersões presenciais",
-      descricao:
-        "Nossos alunos têm desconto nas nossas imersões e eventos presenciais realizados em todas as capitais do Brasil.",
-      icone: FaHouseUser,
-    },
+    // {
+    //   titulo: "Imersões presenciais",
+    //   descricao:
+    //     "Nossos alunos têm desconto nas nossas imersões e eventos presenciais realizados em todas as capitais do Brasil.",
+    //   icone: FaHouseUser,
+    // },
   ];
 
   return (

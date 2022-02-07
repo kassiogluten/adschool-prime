@@ -6,6 +6,7 @@ import {
   Text,
   Stack,
 } from "@chakra-ui/react";
+import Script from "next/script";
 
 export function Depoimentos() {
   return (
@@ -52,6 +53,22 @@ export function Depoimentos() {
             VEJA EM TEMPO REAL O QUE ESTÃO FALANDO DE NÓS
           </Text>
         </Stack>
+        <div id="fb-root"></div>
+      <Script
+        async
+        defer
+        crossOrigin="anonymous"
+        src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v12.0"
+        nonce="qEJO4DSg"
+      ></Script>
+      <div
+        className="fb-comments"
+        data-href="https://www.facebook.com/adschoolbrasil"
+        data-width="100%"
+        data-numposts="5"
+        data-colorscheme="dark"
+        colorscheme="dark"
+      ></div>
       </Flex>
     </Flex>
   );
