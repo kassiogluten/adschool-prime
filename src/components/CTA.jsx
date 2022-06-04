@@ -1,51 +1,11 @@
-import React, {  } from "react";
-import {
-  Flex,
-  Text,
-  Button,
-} from "@chakra-ui/react";
+import React from "react";
+import { Flex, Text, Button } from "@chakra-ui/react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { useMyContext } from "../contexts/Context";
 import { Formulario } from "./Formulario2";
+import { FormularioMensal } from "./FormularioMensal";
 
 export function CTA() {
-  function notificacao() {
-    console.log("render form");
-    window.OneSignal = window.OneSignal || [];
-    OneSignal.push(function () {
-      OneSignal.init({
-        // appId: "cddc769c-4db1-4950-acba-ce6833641a55",
-        appId: "de1f8fb1-9d7d-4828-bfbc-60c5dea86910",
-        safari_web_id: "web.onesignal.auto.504512c8-952a-4d80-9d02-48e16e3cc659",
-        autoRegister: true,
-        autoResubscribe: true,
-        // promptOptions: {
-        //   customlink: {
-        //     enabled: true /* Required to use the Custom Link */,
-        //     style: "button" /* Has value of 'button' or 'link' */,
-        //     size: "medium" /* One of 'small', 'medium', or 'large' */,
-        //     color: {
-        //       button:
-        //         "#E12D30" /* Color of the button background if style = "button" */,
-        //       text: "#FFFFFF" /* Color of the prompt's text */,
-        //     },
-        //     text: {
-        //       subscribe:
-        //         "Receber notificações" /* Prompt's text when not subscribed */,
-        //       unsubscribe:
-        //         "Unsubscribe from push notifications" /* Prompt's text when subscribed */,
-        //     },
-        //     unsubscribeEnabled: false /* Controls whether the prompt is visible after subscription */,
-        //   },
-        // },
-
-        allowLocalhostAsSecureOrigin: true,
-      });
-    });
-    setIsModalOpen(true);
-  }
-
-  const { setIsModalOpen } = useMyContext();
   return (
     <Flex
       flexDir="column"
@@ -57,7 +17,8 @@ export function CTA() {
       py="4rem"
     >
       <Button
-        onClick={notificacao}
+        as="a"
+        href="#planos"
         variant="outline"
         _hover={{ borderColor: "amarelo" }}
         color="amarelo"
@@ -70,7 +31,8 @@ export function CTA() {
           ME INSCREVER
         </Text>
       </Button>
-      <Formulario notificacao={notificacao} />
+      <Formulario />
+      <FormularioMensal />
     </Flex>
   );
 }

@@ -28,7 +28,7 @@ export function Preco() {
     "Conexão com Vagas de Emprego",
     "Até 3 usuários logados ao mesmo tempo",
   ];
-  const { setIsModalOpen } = useMyContext();
+  const { setIsModalOpen, setIsModalMensalOpen } = useMyContext();
   return (
     <Flex
       flexDir="column"
@@ -37,6 +37,7 @@ export function Preco() {
       align="center"
       w="100%"
       overflow="hidden"
+      id="planos"
     >
       <Flex
         p="2rem 1rem"
@@ -119,7 +120,7 @@ export function Preco() {
               ))}
             </List>
             <Button
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => setIsModalMensalOpen(true)}
               my={8}
               p={10}
               colorScheme="none"

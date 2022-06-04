@@ -89,7 +89,8 @@ export function Hero() {
         </Text>
 
         <Button
-          onClick={() => setIsModalOpen(true)}
+          as="a"
+          href="#planos"
           mt={8}
           _hover={{ color: "white", bg: "amarelo" }}
           color="black"

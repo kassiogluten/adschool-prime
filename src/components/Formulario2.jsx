@@ -20,7 +20,7 @@ import {
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { useMyContext } from "../contexts/Context";
 
-export const Formulario = ({ notificacao }) => {
+export const Formulario = () => {
   const { isModalOpen, setIsModalOpen } = useMyContext();
   /* 
   useEffect(() => {
@@ -75,7 +75,7 @@ export const Formulario = ({ notificacao }) => {
   return (
     <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
       <ModalOverlay />
-      <ModalContent>
+      <ModalContent bg="white">
         <ModalCloseButton color="black" />
         <ModalBody align="start" flexDir="column">
           <Box
