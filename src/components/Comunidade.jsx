@@ -18,6 +18,8 @@ import {
   FaTools,
   FaUserGraduate,
   FaUserTie,
+  FaRecordVinyl,
+  FaUsers,
 } from "react-icons/fa";
 
 export function Comunidade() {
@@ -25,22 +27,21 @@ export function Comunidade() {
     {
       titulo: "Uma assinatura, todos os cursos",
       descricao:
-        "Gere economia pagando um único valor anual para acessar todos os treinamentos. Sem pegadinha.",
+        "Gere economia pagando um único valor mensal para acessar todos os treinamentos e mentorias.",
       icone: FaPiggyBank,
     },
-
     {
-      titulo: "Seja conectado à vagas",
+      titulo: "Mentorias ao Vivo Semanalmente",
       descricao:
-        "Todos os nossos alunos certificados, sem excessão, são encaminhados para empresas e startups.",
-      icone: FaHandshake,
+        "Dentro do próprio plano, sem pagar nada a mais por isso, sem esteira de produtos e sem guruzagem.",
+      icone: FaRecordVinyl,
     },
 
     {
-      titulo: "Projeto Prático Hands'On",
+      titulo: "Seja conectado à vagas de emprego",
       descricao:
-        "Na Adschool você aprende na prática com produto real vendendo de verdade. Nada de enrolação.",
-      icone: FaTools,
+        "Todos os nossos alunos certificados, sem excessão, podem participar do programa de encaminhamento profissional.",
+      icone: FaHandshake,
     },
 
     // {
@@ -58,24 +59,23 @@ export function Comunidade() {
     // },
 
     {
-      titulo: "Certificado Físico Adschool",
+      titulo: "Suporte via Comunidade",
       descricao:
-        "Na Adschool você aprende na prática com produto real vendendo de verdade. Nada de enrolação.",
+        "Receba suporte online via whatsapp oficial, além do suporte dos próprios membros da Adschool.",
+      icone: FaRocketchat,
+    },
+
+    {
+      titulo: "Apostilas e Certificações",
+      descricao:
+        "Nós fornecemos apostilas e certificados para a conclusão de todos as formações com mais de 70% de aproveitamento.",
       icone: FaUserGraduate,
     },
-
     {
-      titulo: "Ebooks e materiais de apoio",
+      titulo: "Até 3 usuários ao mesmo tempo",
       descricao:
-        "Mais do que apenas vídeo: você recebe materiais complementares como ebooks e planilhas.",
-      icone: FaFilePdf,
-    },
-
-    {
-      titulo: "Comunidade de alunos e suporte",
-      descricao:
-        "Somos uma comunidade de jovens anunciantes que produzem networkin com grandes empresas e CEO’s.",
-      icone: FaSitemap,
+        "Não tá fácil pra ninguém, por isso liberamos até 3 usuários logados ao mesmo tempo por assinatura. Divida com os amigos.",
+      icone: FaUsers,
     },
 
     // {
@@ -97,7 +97,7 @@ export function Comunidade() {
     >
       <Flex
         p="1rem 1rem"
-        align="center"
+        align="start"
         maxW={1000}
         w="full"
         justify="space-between"
@@ -109,9 +109,10 @@ export function Comunidade() {
           color="azul"
           fontSize="32px"
           fontFamily="OrkneyMedium"
-          textAlign="center"
+          textAlign="start"
         >
-          Estude na Maior Escola de Tráfego do Brasil
+          Não somos a maior escola de marketing digital do Brasil... e nem
+          queremos
         </Heading>
         <Stack
           align="center"
@@ -128,17 +129,17 @@ export function Comunidade() {
             fontSize="13px"
             lineHeight={1}
           >
-            UMA COMUNIDADE COM INÚMERAS VANTAGENS
+            NOS PREOCUPAMOS APENAS EM ENTREGAR QUALIDADE
           </Text>
         </Stack>
       </Flex>
-      <Wrap justify="center" maxW={1200} spacing={8}>
+      <Wrap justify="center" maxW={1000} spacing={8}>
         {lista.map((item) => (
           <Flex
             flexDir="column"
             key={item.titulo}
             boxShadow="85px -13px 200px 11px rgb(11 175 233 / 24%) inset"
-            maxW={350}
+            maxW={312}
             p="32px"
             borderRadius="16px"
             align="start"
@@ -146,10 +147,10 @@ export function Comunidade() {
             spacing={4}
           >
             <HStack spacing={0} h={12}>
-              <item.icone size={60} color="#CEC5C5" />
+              <item.icone size={60} color="#12DDFF" />
               <Text
                 dangerouslySetInnerHTML={{ __html: item.titulo }}
-                fontSize="18px"
+                fontSize="20px"
                 fontFamily="OrkneyRegular"
                 pl={4}
               />

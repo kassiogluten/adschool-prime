@@ -15,7 +15,7 @@ export const theme = extendTheme({
   components: {
     Button: {
       baseStyle: {
-        rounded: "full",
+        rounded: 4,
         fontFamily: "OrkneyMedium",
         fontSize: "15px",
       },

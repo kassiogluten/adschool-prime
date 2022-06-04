@@ -46,7 +46,7 @@ export function VoceVaiAprender() {
     >
       <Flex
         p="1rem 1rem"
-        align="center"
+        align="start"
         maxW={1000}
         w="full"
         justify="space-between"
@@ -58,7 +58,7 @@ export function VoceVaiAprender() {
           color="azul"
           fontSize="32px"
           fontFamily="OrkneyMedium"
-          textAlign="center"
+          textAlign="start"
         >
           O que você vai aprender na prática
         </Heading>
@@ -80,13 +80,13 @@ export function VoceVaiAprender() {
             UM STREAMING DE CAMPANHAS REAIS
           </Text>
         </Stack>
-        <Flex pl={16}
+        <Flex pt={4}
           as={List}
           maxW={800}
           w="full"
           flexWrap="wrap"
           flexDir="column"
-          h={{base:'fit-content', md:225}}
+          h={{base:'fit-content', md:250}}
         >
           {lista.map((item) => {
             return (

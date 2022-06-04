@@ -22,15 +22,20 @@ export function Equipe() {
       foto: "/equipe/Serginho.jpg",
     },
     {
+      nome: "Diego Karvak",
+      cargo: "Gestor de Tráfego e Analista para Ecommerce",
+      foto: "/equipe/Diego.jpeg",
+    },
+    {
+      nome: "Kenedy Lucas",
+      cargo: "Copywriter na VK Digital",
+      foto: "/equipe/Kenedy.png",
+    },
+    {
       nome: "Pedro Hbn",
       cargo:
         "Gestor de Tráfego para Lançamentos e Embaixador Escola Estado da Arte",
       foto: "/equipe/Pedro.jpg",
-    },
-    {
-      nome: "Diego Karvak",
-      cargo: "Gestor de Tráfego e Analista para Ecommerce",
-      foto: "/equipe/Diego.jpeg",
     },
     {
       nome: "Henrique Fernandes",
@@ -38,19 +43,34 @@ export function Equipe() {
       foto: "/equipe/Henrique.png",
     },
     {
-      nome: "Magno Dias",
-      cargo: "Branding e Publicidade e CEO da Suricato Agência e Suri Academy",
-      foto: "/equipe/Magno.jpg",
-    },
-    {
       nome: "Patrícia Carmo",
       cargo: "Tik Tok Ads, conteúdo e CMO da Adschool Brasil",
       foto: "/equipe/Patrícia.png",
     },
     {
-      nome: "Nicolas Rodrigues",
-      cargo: "Análise de Dados e CEO da Leadline Brasil",
-      foto: "/equipe/Nicolas.jpg",
+      nome: "Magno Dias",
+      cargo: "Branding e Publicidade e CEO da Suricato Agência e Suri Academy",
+      foto: "/equipe/Magno.jpg",
+    },
+    {
+      nome: "Layla Rodrigues",
+      cargo: "Especialista em Facebook Ads e Co-founder da Comunidade Mulheres no Tráfego",
+      foto: "/equipe/Layla.jpeg",
+    },
+    {
+      nome: "Luis Henrique",
+      cargo: "Gestor de Tráfego e Founder da Unitas Digital",
+      foto: "/equipe/Luis.jpeg",
+    },
+    {
+      nome: "Israel Favato",
+      cargo: "Estrategista de Tráfego e CMO da VersaTec",
+      foto: "/equipe/Israel.jpeg",
+    },
+    {
+      nome: "João Antônio",
+      cargo: "Copywriter na Suricato Agência",
+      foto: "/equipe/Joao.jpeg",
     },
   ];
 
@@ -65,7 +85,7 @@ export function Equipe() {
     >
       <Flex
         p="1rem 1rem"
-        align="center"
+        align="start"
         maxW={1000}
         w="full"
         justify="space-between"
@@ -77,7 +97,7 @@ export function Equipe() {
           color="azul"
           fontSize="32px"
           fontFamily="OrkneyMedium"
-          textAlign="center"
+          textAlign="start"
         >
           Aprenda com quem está no campo de batalha
         </Heading>
@@ -100,18 +120,18 @@ export function Equipe() {
           </Text>
         </Stack>
       </Flex>
-      <Wrap justify="center" maxW={1200} spacing={8}>
+      <Wrap justify="center" maxW={1000} spacing={8}>
         {lista.map((item) => (
           <Flex
             textAlign="center"
             align="center"
             flexDir="column"
             key={item.nome}
-            maxW={250}
+            maxW={220}
           >
             <Box
-              height={250}
-              width={250}
+              height={220}
+              width={220}
               position="relative"
               rounded="full"
               overflow="hidden"

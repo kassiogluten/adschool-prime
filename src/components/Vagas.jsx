@@ -78,7 +78,7 @@ export function Vagas() {
     >
       <Flex
         p="1rem 1rem"
-        align="center"
+        align="start"
         maxW={1000}
         w="full"
         justify="space-between"
@@ -86,11 +86,11 @@ export function Vagas() {
       >
         <Heading
           pt={8}
-          maxW={400}
+          maxW={500}
           color="azul"
           fontSize="32px"
           fontFamily="OrkneyMedium"
-          textAlign="center"
+          textAlign="start"
         >
           Nós conectamos você com vagas em grandes startups
         </Heading>
@@ -109,24 +109,24 @@ export function Vagas() {
             fontSize="13px"
             lineHeight={1}
           >
-            VAGAS PARA GESTORES DE TRÁFEGO
+            VAGAS PARA ESTRATEGISTAS DE PERFORMANCE
           </Text>
         </Stack>
-        <Text textAlign="center" pt={6} fontSize="14px" color="cinza">
+        {/* <Text textAlign="start" pt={6} fontSize="14px" color="cinza">
           A Adschool não é um produto digital. Nós somos uma escola preocupada
           com a sua aprendizagem. E pensando nisso, nós temos o compromisso de
           encaminhar TODOS os nossos alunos certificados para o mercado, através
           do programa AdHiring, onde conectamos você à uma vaga dentro de uma
           grande empresa ou startup.
-        </Text>
+        </Text> */}
       </Flex>
-      <Wrap justify="center" maxW={1200} spacing={8}>
+      <Wrap justify="center" maxW={1000} spacing={12}>
         {lista.map((item) => (
           <Flex
             flexDir="column"
             key={item.titulo}
             boxShadow="85px -13px 200px 11px rgb(11 175 233 / 24%) inset"
-            maxW={350}
+            maxW={300}
             p="32px"
             borderRadius="16px"
             lineHeight={1}
@@ -135,11 +135,12 @@ export function Vagas() {
             spacing={4}
           >
             <HStack spacing={0} h={12}>
-              <FaRegHandshake size={80} color="#ddd" />
+              <FaRegHandshake size={80} color="#12DDFF" />
               <Text
                 dangerouslySetInnerHTML={{ __html: item.titulo }}
-                fontSize="18px"
-                fontFamily="OrkneyRegular"
+                fontSize="20px"
+                fontFamily="OrkneyMedium"
+                fontWeight={600}
                 pl={4}
               />
             </HStack>

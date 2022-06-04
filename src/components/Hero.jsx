@@ -50,7 +50,7 @@ export function Hero() {
         flexDir="column"
         lineHeight={1.5}
       >
-        <Image alt="Logo Adschool" src="/logo.png" width={70} height={17} />
+        <Image alt="Logo Adschool" src="/logo2.png" width={100} height={41} />
         <Stack
           align="center"
           spacing={2}
@@ -66,17 +66,26 @@ export function Hero() {
             fontSize="13px"
             lineHeight={1}
           >
-            A ESCOLA DO GESTOR DE TRÁFEGO
+            A ESCOLA DO ESTRATEGISTA DIGITAL #FORAGURU
           </Text>
         </Stack>
-        <Heading py={8} maxW={800} fontSize={{ base: "32px", sm: "56px" }}>
-          Transformamos jovens em anunciantes profissionais e conectamos com o
-          mercado​
+        <Heading
+          fontFamily="OrkneyMedium"
+          py={8}
+          maxW={800}
+          fontSize={{ base: "28px", sm: "48px" }}
+        >
+          Ou você aprende a criar a sua própria estratégia, ou vai ser parte da
+          estratégia de alguém
         </Heading>
-        <Text fontFamily="OrkneyRegular" maxW={800} fontSize="18px">
-          Aprenda na prática tudo sobre tráfego e marketing de performance e
-          seja conectado com vagas para trabalhar nas maiores empresas e
-          startups do Brasil.
+        <Text fontFamily="OrkneyRegular" maxW={800} fontSize="16px">
+          Não somos um Info-produto, somos uma Escola. Não te ensinamos a ser
+          milionário, nós formamos Estrategistas Digitais. Não te ensinamos
+          nossas Fórmulas, te ensinamos a Criar as suas.
+        </Text>
+        <Text pt={4} fontFamily="OrkneyRegular" maxW={800} fontSize="14px">
+          Aprenda tudo sobre Estratégia, Funis de Vendas, Tráfego, Copywriting,
+          Analytics e CRM em <br /> 6 Formações e mais de 20 Treinamentos.
         </Text>
 
         <Button
@@ -86,6 +95,8 @@ export function Hero() {
           color="black"
           bg="azul"
           w={225}
+          fontWeight={400}
+          fontFamily="OrkneyRegular"
           rightIcon={<FaLongArrowAltRight />}
         >
           <Text pr={2} pt={1}>

@@ -21,7 +21,7 @@ export function Mensagens() {
     >
       <Flex
         p="1rem 1rem"
-        align="center"
+        align="start"
         maxW={1000}
         w="full"
         justify="space-between"
@@ -33,7 +33,7 @@ export function Mensagens() {
           color="white"
           fontSize="32px"
           fontFamily="OrkneyMedium"
-          textAlign="center"
+          textAlign="start"
         >
           Em alguns anos vão existir dois tipos de empresas: as que vendem pela
           internet e as que estão fora dos negócios

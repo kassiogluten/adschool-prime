@@ -14,7 +14,7 @@ export function Depoimentos() {
     >
       <Flex
         p="2rem 1rem"
-        align="center"
+        align="start"
         maxW={1000}
         w="full"
         justify="space-between"
@@ -26,7 +26,7 @@ export function Depoimentos() {
           color="azul"
           fontSize="32px"
           fontFamily="OrkneyMedium"
-          textAlign="center"
+          textAlign="start"
         >
           Depoimentos de pessoas reais
         </Heading>

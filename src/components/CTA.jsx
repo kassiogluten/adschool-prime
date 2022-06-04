@@ -6,7 +6,7 @@ import {
 } from "@chakra-ui/react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { useMyContext } from "../contexts/Context";
-import { Formulario } from "./Formulario";
+import { Formulario } from "./Formulario2";
 
 export function CTA() {
   function notificacao() {

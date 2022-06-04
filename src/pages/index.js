@@ -15,6 +15,7 @@ import { VoceVaiAprender } from "../components/VoceVaiAprender";
 import { request } from "graphql-request";
 import { WhatsappButton } from "../components/WhatsappButton";
 import Script from "next/script";
+import { Box } from "@chakra-ui/react";
 
 export default function Home({ cursos }) {
   return (
@@ -53,6 +54,8 @@ export default function Home({ cursos }) {
 
       <Footer />
       <WhatsappButton />
+
+      
     </>
   );
 }

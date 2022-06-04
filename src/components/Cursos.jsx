@@ -45,7 +45,7 @@ export function Cursos({ cursos }) {
     >
       <Flex
         p="5rem 1rem"
-        align="center"
+        align="start"
         maxW={1200}
         w="full"
         justify="space-between"
@@ -54,11 +54,13 @@ export function Cursos({ cursos }) {
         <Heading
           maxW={650}
           color="azul"
-          fontSize="40px"
-          fontFamily="OrkneyMedium"
-          textAlign="center"
+          fontSize="32px"
+          fontFamily="OrkneyRegular"
+          fontWeight={400}
+          textAlign="start"
         >
-          Aprenda ferramentas de tráfego e estratégias de vendas
+          Aprenda as ferramentas que te farão criar estratégias e Funis de alta
+          Conversão
         </Heading>
 
         <Stack
@@ -75,11 +77,11 @@ export function Cursos({ cursos }) {
             fontSize="13px"
             lineHeight={1}
           >
-            UMA ÚNICA ASSINATURA, TODOS OS TREINAMENTOS
+            UMA ÚNICA ASSINATURA, 6 FORMAÇÕES E TODOS OS TREINAMENTOS
           </Text>
         </Stack>
       </Flex>
-      <Wrap justify="center" maxW={1200} spacing={8}>
+      <Wrap justify="center" maxW={1200} spacing={12}>
         {cursos &&
           cursos.map((curso) => {
             return (
@@ -125,11 +127,12 @@ export function Cursos({ cursos }) {
                     onOpen();
                     setSelectedCurso(curso);
                   }}
-                  variant="outline"
-                  _hover={{ color: "white", bg: "amarelo", border: "none" }}
+                  variant="solid"
+                  _hover={{ color: "white", bg: "transparent", border: "none" }}
+                  bg="transparent"
                   color="azul"
-                  borderColor="azul"
-                  border="2px"
+                  borderColor="transparent"
+                  border="0px"
                   w={225}
                   rightIcon={<Icon.FaArrowCircleRight />}
                 >
