@@ -16,10 +16,10 @@ export default function Preview() {
           content="Transformamos jovens em anunciantes profissionais e conectamos com o mercado​"
         />
         <meta property="og:image" content="/logo.png" key="ogimage" />
-        <script
+        {/* <script
           src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"
           async=""
-        ></script>
+        ></script> */}
       </Head>
       <CursosPreview />
     </>

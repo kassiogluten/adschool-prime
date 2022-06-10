@@ -33,7 +33,7 @@ import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 export function Cursos({ cursos }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [selectedCurso, setSelectedCurso] = useState({});
+  const [selectedCurso, setSelectedCurso] = useState(cursos[0]);
   return (
     <Flex
       flexDir="column"
@@ -93,14 +93,18 @@ export function Cursos({ cursos }) {
                 lineHeight={1}
                 align="start"
                 spacing={4}
-                key={curso.id}
+                key={curso.cursoYId}
               >
                 <HStack align="flex-start">
-                  <Icone iconName={curso.icone} size={50} color="#12DDFF" />
+                  <Icone
+                    iconName={curso.curso.icone}
+                    size={50}
+                    color="#12DDFF"
+                  />
 
                   <Box
                     dangerouslySetInnerHTML={{
-                      __html: curso.nome.replace("\n", "</br>"),
+                      __html: curso.title.replace("\n", "</br>"),
                     }}
                     fontSize="13px"
                     letterSpacing="2px"
@@ -108,18 +112,14 @@ export function Cursos({ cursos }) {
                     pl={4}
                   />
                 </HStack>
-                <Box
-                  dangerouslySetInnerHTML={{
-                    __html: curso.descricaoBreve.html,
-                  }}
-                />
+                <Text>{curso.curso.descricaoBreve}</Text>
                 <HStack>
                   <Icon.FaHourglassHalf color="#F7B500" />
-                  <Text>{curso.horas} horas</Text>
+                  <Text>{curso.curso.horas} horas</Text>
                 </HStack>
                 <HStack pb={4}>
                   <Icon.FaListUl color="#F7B500" />
-                  <Text>{curso.aulas} aulas</Text>
+                  <Text>{curso.curso.aulas} aulas</Text>
                 </HStack>
                 <Button
                   aria-label="Abrir detalhes do curso"
@@ -173,12 +173,12 @@ const SideBar = ({ isOpen, onClose, selectedCurso }) => (
             textAlign="center"
             fontSize={28}
             color="azul"
-            dangerouslySetInnerHTML={{ __html: selectedCurso.nome }}
+            dangerouslySetInnerHTML={{ __html: selectedCurso.title }}
           />
-          {selectedCurso.descricaoCompleta?.html && (
+          {selectedCurso.curso?.descricaoCompleta && (
             <Box
               dangerouslySetInnerHTML={{
-                __html: selectedCurso.descricaoCompleta.html,
+                __html: selectedCurso.curso.descricaoCompleta,
               }}
             />
           )}
@@ -187,34 +187,31 @@ const SideBar = ({ isOpen, onClose, selectedCurso }) => (
 
           {/* <Text> {selectedCurso.descricaoCompleta.text || selectedCurso.descricaoCompleta.markdown} </Text> */}
 
-          {selectedCurso.video && (
+          {selectedCurso.curso?.video && (
             <Box maxW={500} w="full">
-              <LiteYouTubeEmbed
-                id={selectedCurso.video}
-                title="What’s new in Material Design for the web (Chrome Dev Summit 2019)"
-              />
+              <LiteYouTubeEmbed id={selectedCurso.curso.video} />
             </Box>
           )}
 
           <HStack>
             <Icon.FaHourglassHalf color="#F7B500" />
-            <Text>{selectedCurso.horas} horas</Text>
+            <Text>{selectedCurso.curso?.horas} horas</Text>
           </HStack>
           <HStack pb={4}>
             <Icon.FaListUl color="#F7B500" />
-            <Text>{selectedCurso.aulas} aulas</Text>
+            <Text>{selectedCurso.curso?.aulas} aulas</Text>
           </HStack>
-          {selectedCurso.ementa?.length > 0 && (
+          {selectedCurso.curso.ementa?.length > 0 && (
             <>
               <Text w="full" textAlign="center" fontSize={28} color="azul">
                 Ementa do curso
               </Text>
               <Flex as={List} w="full" flexWrap="wrap" flexDir="column">
-                {selectedCurso.ementa.map((item) => {
+                {selectedCurso.curso.ementa.map((item) => {
                   return (
-                    <ListItem key={item}>
+                    <ListItem key={item.nome}>
                       <ListIcon color="azul" as={Icon.FaCheckCircle} />
-                      {item}
+                      {item.nome}
                     </ListItem>
                   );
                 })}
