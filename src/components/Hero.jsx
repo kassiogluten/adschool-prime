@@ -33,7 +33,7 @@ export function Hero() {
         bgColor="#00000077"
       />
       <Image
-        zIndex={1}
+        zindex={1}
         objectPosition="left top"
         objectFit="cover"
         alt="AdSchool"

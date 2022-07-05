@@ -21,8 +21,8 @@ import { getApolloClient } from "../utils/apollo-client";
 import { gql } from "@apollo/client";
 import { useEffect, useState } from "react";
 
-export default function Home({ cursos }) {
-  console.log(cursos);
+export default function Home({ cursos, equipe }) {
+  // console.log(cursos);
   return (
     <>
       <Head>
@@ -50,7 +50,7 @@ export default function Home({ cursos }) {
       <CTA />
       <Vagas />
       <CTA />
-      <Equipe />
+      <Equipe equipe={equipe}/>
       <Comunidade />
       <Preco />
       <Garantia />
@@ -91,9 +91,28 @@ export const getStaticProps = async () => {
     `,
   });
 
+  const equipe = await apolloClient.query({
+    query: gql`
+      {
+        lp {
+          configuracoesLp {
+            equipe {
+              cargo
+              foto {
+                mediaItemUrl
+              }
+              nome
+            }
+          }
+        }
+      }
+    `,
+  });
+
   return {
     props: {
       cursos: data.data.cursosY.nodes,
+      equipe: equipe.data.lp.configuracoesLp,
     },
     revalidate: 60 * 60 * 1, //1 hour
   };

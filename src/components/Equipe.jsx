@@ -9,70 +9,22 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 
-export function Equipe() {
-  const lista = [
-    {
-      nome: "Paulo Bonfá",
-      cargo: "Estrategista Digital e CEO na Adschool e no Crifras Academy",
-      foto: "/equipe/Paulo.jpg",
-    },
-    {
-      nome: "Serginho Groove",
-      cargo: "Copywriter e Redator no Grupo Primo Rico",
-      foto: "/equipe/Serginho.jpg",
-    },
-    {
-      nome: "Diego Karvak",
-      cargo: "Gestor de Tráfego e Analista para Ecommerce",
-      foto: "/equipe/Diego.jpeg",
-    },
-    {
-      nome: "Kenedy Lucas",
-      cargo: "Copywriter na VK Digital",
-      foto: "/equipe/Kenedy.png",
-    },
-    {
-      nome: "Pedro Hbn",
-      cargo:
-        "Gestor de Tráfego para Lançamentos e Embaixador Escola Estado da Arte",
-      foto: "/equipe/Pedro.jpg",
-    },
-    {
-      nome: "Henrique Fernandes",
-      cargo: "Tráfego e Head de Growth na Leadline Brasil",
-      foto: "/equipe/Henrique.png",
-    },
-    {
-      nome: "Patrícia Carmo",
-      cargo: "Tik Tok Ads, conteúdo e CMO da Adschool Brasil",
-      foto: "/equipe/Patrícia.png",
-    },
-    {
-      nome: "Magno Dias",
-      cargo: "Branding e Publicidade e CEO da Suricato Agência e Suri Academy",
-      foto: "/equipe/Magno.jpg",
-    },
-    {
-      nome: "Layla Rodrigues",
-      cargo: "Especialista em Facebook Ads e Co-founder da Comunidade Mulheres no Tráfego",
-      foto: "/equipe/Layla.jpeg",
-    },
-    {
-      nome: "Luis Henrique",
-      cargo: "Gestor de Tráfego e Founder da Unitas Digital",
-      foto: "/equipe/Luis.jpeg",
-    },
-    {
-      nome: "Israel Favato",
-      cargo: "Estrategista de Tráfego e CMO da VersaTec",
-      foto: "/equipe/Israel.jpeg",
-    },
-    {
-      nome: "João Antônio",
-      cargo: "Copywriter na Suricato Agência",
-      foto: "/equipe/Joao.jpeg",
-    },
-  ];
+export function Equipe({equipe}) {
+  // const lista = [
+  //   {
+  //     nome: "Paulo Bonfá",
+  //     cargo: "Estrategista Digital e CEO na Adschool e no Crifras Academy",
+  //     foto: "/equipe/Paulo.jpg",
+  //   },
+  // ];
+
+  const lista = equipe.equipe.map((item) => {
+    return {
+      nome: item.nome,
+      cargo: item.cargo,
+      foto: item.foto.mediaItemUrl,
+    };
+  });
 
   return (
     <Flex
