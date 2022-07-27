@@ -76,8 +76,8 @@ export function Preco() {
           </Text>
         </Stack>
 
-        <Flex w="full" justify="space-between" gap={6} flexDirection={{ base: "column", lg: "row" }}>
-          <VStack
+        <Flex w="full" justify="center" gap={6} flexDirection={{ base: "column", lg: "row" }}>
+          {/* <VStack
             p={8}
             w="full"
             maxW={550}
@@ -109,7 +109,6 @@ export function Preco() {
               </Text>
             </HStack>
             <Text lineHeight={0}>Cancele quando quiser</Text>
-            {/* <Text lineHeight={1}>Mensalmente no cartão.</Text> */}
             <List py={6} spacing={4} textAlign="center">
               {listPlanItems.map((item) => (
                 <ListItem key={item}>
@@ -130,7 +129,7 @@ export function Preco() {
               ME INSCREVER
             </Button>
 
-          </VStack>
+          </VStack> */}
           <VStack
             p={8}
             w="full"
