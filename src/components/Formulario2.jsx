@@ -81,6 +81,9 @@ export const Formulario = () => {
           <Box
             dangerouslySetInnerHTML={{
               __html: `<style>
+              ._form-content ::placeholder {
+                color: #ccc;
+            }
               #_form_31_ { font-size:14px; line-height:1.6; font-family:arial, helvetica, sans-serif; margin:0; }
               #_form_31_ * { outline:0; }
               ._form_hide { display:none; visibility:hidden; }

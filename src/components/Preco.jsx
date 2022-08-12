@@ -149,7 +149,7 @@ export function Preco() {
               R$469 de Desconto
               </Text> */}
             </Center>
-            <Text
+            {/* <Text
               transform="rotate(45deg)"
               position="absolute"
               top={6}
@@ -162,7 +162,7 @@ export function Preco() {
               bg="#F79102"
             >
              + POPULAR
-            </Text>
+            </Text> */}
             <HStack align="flex-start">
               <Text fontFamily="OrkneyMedium" pt={4} fontSize="16px">
                 R$
