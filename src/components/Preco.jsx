@@ -136,7 +136,7 @@ export function Preco() {
             maxW={550}
             bg="white"
             borderTopRadius={48}
-            textAlign="center"
+            textAlign="start"
             position="relative"
             overflow="hidden"
             color="#666"
@@ -145,9 +145,9 @@ export function Preco() {
               <Heading fontFamily="OrkneyMedium" fontSize={24} maxW={250}>
                 Plano Anual
               </Heading>
-              <Text fontSize={14} fontWeight={600} color="black">
+             {/*  <Text fontSize={14} fontWeight={600} color="black">
               R$469 de Desconto
-              </Text>
+              </Text> */}
             </Center>
             <Text
               transform="rotate(45deg)"
@@ -168,13 +168,13 @@ export function Preco() {
                 R$
               </Text>
               <Text fontFamily="OrkneyBold" fontSize="56px">
-                59
+                89
               </Text>
               <Text fontFamily="OrkneyBold" pt={4} fontSize="16px">
                 12x
               </Text>
             </HStack>
-            <Text lineHeight={0}>ou R$599 à vista</Text>
+            <Text lineHeight={0}>ou R$899 à vista</Text>
             {/* <Text lineHeight={1}>Mensalmente no cartão.</Text> */}
             <List py={6} spacing={4} textAlign="center">
               {listPlanItems.map((item) => (
