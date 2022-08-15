@@ -10,7 +10,7 @@ export const WhatsappButton = () => (
     bottom={4}
     right={1}
     as="a"
-    href="https://api.whatsapp.com/send/?phone=553391033595&text=Ol%C3%A1%21+Gostaria+de+tirar+algumas+d%C3%BAvidas%21&app_absent=0"
+    href="https://api.whatsapp.com/send/?phone=553398739097&text=Ol%C3%A1%21+Gostaria+de+tirar+algumas+d%C3%BAvidas%21&app_absent=0"
     target="_blank"
   >
     <Image priority src="/whatsapp.png" alt="Chamar no Whatsapp" layout="fill" />
