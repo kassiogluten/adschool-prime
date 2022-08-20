@@ -81,9 +81,6 @@ export const Formulario = () => {
           <Box
             dangerouslySetInnerHTML={{
               __html: `<style>
-              ._form-content ::placeholder {
-                color: #ccc;
-            }
               #_form_31_ { font-size:14px; line-height:1.6; font-family:arial, helvetica, sans-serif; margin:0; }
               #_form_31_ * { outline:0; }
               ._form_hide { display:none; visibility:hidden; }
@@ -92,9 +89,9 @@ export const Formulario = () => {
               #_form_31_._form-bottom { bottom:0; }
               #_form_31_._form-left { left:0; }
               #_form_31_._form-right { right:0; }
-              #_form_31_ input[type="text"],#_form_31_ input[type="date"],#_form_31_ textarea { padding:6px; height:auto; border:#979797 1px solid; border-radius:4px; color:#000 !important; font-size:14px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
+              #_form_31_ input[type="text"],#_form_31_ input[type="tel"],#_form_31_ input[type="date"],#_form_31_ textarea { padding:6px; height:auto; border:#979797 1px solid; border-radius:4px; color:#000 !important; font-size:14px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
               #_form_31_ textarea { resize:none; }
-              #_form_31_ ._submit { -webkit-appearance:none; cursor:pointer; font-family:arial, sans-serif; font-size:14px; text-align:center; background:#eb580e !important; border:0 !important; -moz-border-radius:10px !important; -webkit-border-radius:10px !important; border-radius:10px !important; color:#fff !important; padding:25px !important; }
+              #_form_31_ ._submit { -webkit-appearance:none; cursor:pointer; font-family:arial, sans-serif; font-size:14px; text-align:center; background:#1cb3ff !important; border:0 !important; -moz-border-radius:10px !important; -webkit-border-radius:10px !important; border-radius:10px !important; color:#030303 !important; padding:25px !important; }
               #_form_31_ ._close-icon { cursor:pointer; background-image:url('https://d226aj4ao1t61q.cloudfront.net/esfkyjh1u_forms-close-dark.png'); background-repeat:no-repeat; background-size:14.2px 14.2px; position:absolute; display:block; top:11px; right:9px; overflow:hidden; width:16.2px; height:16.2px; }
               #_form_31_ ._close-icon:before { position:relative; }
               #_form_31_ ._form-body { margin-bottom:30px; }
@@ -158,7 +155,7 @@ export const Formulario = () => {
               #_form_31_ button[type="submit"] { padding:20px; font-size:1.5em; }
               #_form_31_ ._inline-style { margin:20px 0 0 !important; }
               }
-              #_form_31_ { position:relative; text-align:left; margin:25px auto 0; padding:20px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; *zoom:1; background:#030303 !important; border:0px solid #b0b0b0 !important; max-width:350px; -moz-border-radius:0px !important; -webkit-border-radius:0px !important; border-radius:0px !important; color:#f0f0f0 !important; }
+              #_form_31_ { position:relative; text-align:left; margin:25px auto 0; padding:20px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; *zoom:1; background:#fff !important; border:0px solid #b0b0b0 !important; max-width:350px; -moz-border-radius:0px !important; -webkit-border-radius:0px !important; border-radius:0px !important; color:#707070 !important; }
               #_form_31_._inline-form,#_form_31_._inline-form ._form-content,#_form_31_._inline-form input,#_form_31_._inline-form ._submit { font-family:"IBM Plex Sans", Helvetica, sans-serif; }
               #_form_31_ ._form-title { font-size:22px; line-height:22px; font-weight:600; margin-bottom:0; }
               #_form_31_:before,#_form_31_:after { content:" "; display:table; }
@@ -171,62 +168,72 @@ export const Formulario = () => {
               #_form_31_ ._form-thank-you { position:relative; left:0; right:0; text-align:center; font-size:18px; }
               @media all and (min-width:320px) and (max-width:667px) { #_form_31_._inline-form._inline-style ._inline-style._button-wrapper { margin-top:20px !important; margin-left:0 !important; }
               }
+              #_form_31_ .iti.iti--allow-dropdown.iti--separate-dial-code { width:100%; }
+              #_form_31_ .iti input { width:100%; height:32px; border:#979797 1px solid; border-radius:4px; }
+              #_form_31_ .iti--separate-dial-code .iti__selected-flag { background-color:#fff; border-radius:4px; }
+              #_form_31_ .iti--separate-dial-code .iti__selected-flag:hover { background-color:rgba(0, 0, 0, 0.05); }
+              #_form_31_ .iti__country-list { border-radius:4px; margin-top:4px; min-width:460px; }
+              #_form_31_ .iti__country-list--dropup { margin-bottom:4px; }
+              #_form_31_ .phone-error-hidden { display:none; }
+              #_form_31_ .phone-error { color:#e40e49; }
+              #_form_31_ .phone-input-error { border:1px solid #e40e49 !important; }
              </style>
              <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Roboto&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
-               <form method="POST" action="https://brasiladschool.activehosted.com/proc.php" id="_form_31_" class="_form _form_31 _inline-form  " novalidate>
-                 <input type="hidden" name="u" value="31" />
-                 <input type="hidden" name="f" value="31" />
-                 <input type="hidden" name="s" />
-                 <input type="hidden" name="c" value="0" />
-                 <input type="hidden" name="m" value="0" />
-                 <input type="hidden" name="act" value="sub" />
-                 <input type="hidden" name="v" value="2" />
-                 <input type="hidden" name="or" value="00a198662d3a28baa3d68a63dff5d9eb" />
-                 <div class="_form-content">
-                   <div class="_form_element _x72813301 _full_width _clear" >
-                     <div class="_form-title">
-                       Quase lá...
+               <link rel="stylesheet" type="text/css" href="https://unpkg.com/intl-tel-input@17.0.18/build/css/intlTelInput.min.css"/>
+                 <form method="POST" action="https://brasiladschool.activehosted.com/proc.php" id="_form_31_" class="_form _form_31 _inline-form  _dark" novalidate>
+                   <input type="hidden" name="u" value="31" />
+                   <input type="hidden" name="f" value="31" />
+                   <input type="hidden" name="s" />
+                   <input type="hidden" name="c" value="0" />
+                   <input type="hidden" name="m" value="0" />
+                   <input type="hidden" name="act" value="sub" />
+                   <input type="hidden" name="v" value="2" />
+                   <input type="hidden" name="or" value="afc3da6f3ccac438d967b0d1598db346" />
+                   <div class="_form-content">
+                     <div class="_form_element _x72813301 _full_width _clear" >
+                       <div class="_form-title">
+                         Quase lá...
+                       </div>
+                     </div>
+                     <div class="_form_element _x60732545 _full_width " >
+                       <label for="firstname" class="_form-label">
+                       </label>
+                       <div class="_field-wrapper">
+                         <input type="text" id="firstname" name="firstname" placeholder="Digite seu primeiro nome" />
+                       </div>
+                     </div>
+                     <div class="_form_element _x56940466 _full_width " >
+                       <label for="lastname" class="_form-label">
+                       </label>
+                       <div class="_field-wrapper">
+                         <input type="text" id="lastname" name="lastname" placeholder="Digite seu sobrenome" />
+                       </div>
+                     </div>
+                     <div class="_form_element _x66995801 _full_width " >
+                       <label for="email" class="_form-label">
+                       </label>
+                       <div class="_field-wrapper">
+                         <input type="text" id="email" name="email" placeholder="Digite seu email" required/>
+                       </div>
+                     </div>
+                     <div class="_form_element _x21920601 _full_width " >
+                       <label for="phone" class="_form-label">
+                       </label>
+                       <div class="_field-wrapper">
+                         <input type="text" id="phone" name="phone" placeholder="Whatsapp (DDD+número)" />
+                       </div>
+                     </div>
+                     <div class="_button-wrapper _full_width">
+                       <button id="_form_31_submit" class="_submit" type="submit">
+                         CONTINUAR →
+                       </button>
+                     </div>
+                     <div class="_clear-element">
                      </div>
                    </div>
-                   <div class="_form_element _x60732545 _full_width " >
-                     <label for="firstname" class="_form-label">
-                     </label>
-                     <div class="_field-wrapper">
-                       <input type="text" id="firstname" name="firstname" placeholder="Digite seu primeiro nome" />
-                     </div>
+                   <div class="_form-thank-you" style="display:none;">
                    </div>
-                   <div class="_form_element _x56940466 _full_width " >
-                     <label for="lastname" class="_form-label">
-                     </label>
-                     <div class="_field-wrapper">
-                       <input type="text" id="lastname" name="lastname" placeholder="Digite seu sobrenome" />
-                     </div>
-                   </div>
-                   <div class="_form_element _x66995801 _full_width " >
-                     <label for="email" class="_form-label">
-                     </label>
-                     <div class="_field-wrapper">
-                       <input type="text" id="email" name="email" placeholder="Digite seu email" required/>
-                     </div>
-                   </div>
-                   <div class="_form_element _x21920601 _full_width " >
-                     <label for="phone" class="_form-label">
-                     </label>
-                     <div class="_field-wrapper">
-                       <input type="text" id="phone" name="phone" placeholder="Whatsapp (DDD+número)" />
-                     </div>
-                   </div>
-                   <div class="_button-wrapper _full_width">
-                     <button id="_form_31_submit" class="_submit" type="submit">
-                       CONTINUAR →
-                     </button>
-                   </div>
-                   <div class="_clear-element">
-                   </div>
-                 </div>
-                 <div class="_form-thank-you" style="display:none;">
-                 </div>
-               </form><script type="text/javascript">
+                 </form><script type="text/javascript">
              window.cfields = [];
              window._show_thank_you = function(id, message, trackcmp_url, email) {
                var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
@@ -448,6 +455,12 @@ export const Formulario = () => {
                      tooltip = create_tooltip(elem, "Este campo é necessário.");
                    }
                  }
+                 if (no_error && (elem.id == 'field[]' || elem.id == 'ca[11][v]')) {
+                   if (elem.className.includes('phone-input-error')) {
+                     elem.className = elem.className + ' _has_error';
+                     no_error = false;
+                   }
+                 }
                  if (no_error && elem.name == 'email') {
                    if (!value.match(/^[\+_a-z0-9-'&=]+(\.[\+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) {
                      elem.className = elem.className + ' _has_error';
@@ -472,6 +485,11 @@ export const Formulario = () => {
                      if(el.name === 'email' && el.value !== ""){
                          return true
                      }
+             
+                 if((el.id == 'field[]' || el.id == 'ca[11][v]') && el.className.includes('phone-input-error')){
+                         return true
+                     }
+             
                      return false
                };
                var validate_form = function(e) {
@@ -481,6 +499,12 @@ export const Formulario = () => {
                    for (var i = 0, len = allInputs.length; i < len; i++) {
                      var input = allInputs[i];
                      if (needs_validate(input)) {
+                       if (input.type == 'tel') {
+                         addEvent(input, 'blur', function() {
+                           this.value = this.value.trim();
+                           validate_field(this, true);
+                         });
+                       }
                        if (input.type == 'text' || input.type == 'number' || input.type == 'time') {
                          addEvent(input, 'blur', function() {
                            this.value = this.value.trim();
@@ -528,7 +552,66 @@ export const Formulario = () => {
                };
                addEvent(window, 'resize', resize_tooltips);
                addEvent(window, 'scroll', resize_tooltips);
-                 var _form_serialize = function(form){if(!form||form.nodeName!=="FORM"){return }var i,j,q=[];for(i=0;i<form.elements.length;i++){if(form.elements[i].name===""){continue}switch(form.elements[i].nodeName){case"INPUT":switch(form.elements[i].type){case"text":case"number":case"date":case"time":case"hidden":case"password":case"button":case"reset":case"submit":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"checkbox":case"radio":if(form.elements[i].checked){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value))}break;case"file":break}break;case"TEXTAREA":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"SELECT":switch(form.elements[i].type){case"select-one":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"select-multiple":for(j=0;j<form.elements[i].options.length;j++){if(form.elements[i].options[j].selected){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].options[j].value))}}break}break;case"BUTTON":switch(form.elements[i].type){case"reset":case"submit":case"button":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break}break}}return q.join("&")};
+             
+               var hidePhoneInputError = function(inputId) {
+                 var errorMessage =  document.getElementById("error-msg-" + inputId);
+                 var input = document.getElementById(inputId);
+                 errorMessage.classList.remove("phone-error");
+                 errorMessage.classList.add("phone-error-hidden");
+                 input.classList.remove("phone-input-error");
+               };
+             
+               var initializePhoneInput = function(input, defaultCountry) {
+                 return window.intlTelInput(input, {
+                   utilsScript: "https://unpkg.com/intl-tel-input@17.0.18/build/js/utils.js",
+                   autoHideDialCode: false,
+                   separateDialCode: true,
+                   initialCountry: defaultCountry,
+                   preferredCountries: []
+                 });
+               }
+             
+               var setPhoneInputEventListeners = function(inputId, input, iti) {
+                 input.addEventListener('blur', function() {
+                   var errorMessage = document.getElementById("error-msg-" + inputId);
+                   if (input.value.trim()) {
+                     if (iti.isValidNumber()) {
+                       iti.setNumber(iti.getNumber());
+                       if (errorMessage.classList.contains("phone-error")){
+                         hidePhoneInputError(inputId);
+                       }
+                     } else {
+                       showPhoneInputError(inputId)
+                     }
+                   } else {
+                     if (errorMessage.classList.contains("phone-error")){
+                       hidePhoneInputError(inputId);
+                     }
+                   }
+                 });
+             
+                 input.addEventListener("countrychange", function() {
+                   iti.setNumber('');
+                 });
+             
+                 input.addEventListener("keydown", function(e) {
+                     var charCode = (e.which) ? e.which : e.keyCode;
+                     if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode !== 8) {
+                            e.preventDefault();
+                   }
+                  });
+               };
+             
+               var showPhoneInputError = function(inputId) {
+                 var errorMessage =  document.getElementById("error-msg-" + inputId);
+                 var input = document.getElementById(inputId);
+                 errorMessage.classList.add("phone-error");
+                 errorMessage.classList.remove("phone-error-hidden");
+                 input.classList.add("phone-input-error");
+               };
+             
+             
+                 var _form_serialize = function(form){if(!form||form.nodeName!=="FORM"){return }var i,j,q=[];for(i=0;i<form.elements.length;i++){if(form.elements[i].name===""){continue}switch(form.elements[i].nodeName){case"INPUT":switch(form.elements[i].type){case"tel":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].previousSibling.querySelector('div.iti__selected-dial-code').innerText)+encodeURIComponent(" ")+encodeURIComponent(form.elements[i].value));break;case"text":case"number":case"date":case"time":case"hidden":case"password":case"button":case"reset":case"submit":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"checkbox":case"radio":if(form.elements[i].checked){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value))}break;case"file":break}break;case"TEXTAREA":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"SELECT":switch(form.elements[i].type){case"select-one":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"select-multiple":for(j=0;j<form.elements[i].options.length;j++){if(form.elements[i].options[j].selected){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].options[j].value))}}break}break;case"BUTTON":switch(form.elements[i].type){case"reset":case"submit":case"button":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break}break}}return q.join("&")};
                var form_submit = function(e) {
                  e.preventDefault();
                  if (validate_form()) {

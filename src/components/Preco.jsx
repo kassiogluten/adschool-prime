@@ -77,7 +77,7 @@ export function Preco() {
         </Stack>
 
         <Flex w="full" justify="center" gap={6} flexDirection={{ base: "column", lg: "row" }}>
-          {/* <VStack
+          <VStack
             p={8}
             w="full"
             maxW={550}
@@ -129,7 +129,7 @@ export function Preco() {
               ME INSCREVER
             </Button>
 
-          </VStack> */}
+          </VStack>
           <VStack
             p={8}
             w="full"
