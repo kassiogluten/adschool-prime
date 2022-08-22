@@ -9,31 +9,10 @@ import {
   ListItem,
   ListIcon,
 } from "@chakra-ui/react";
-import {
-  FaCheckCircle,
-} from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 
-export function VoceVaiAprender() {
-  const lista = [
-    "Facebook Ads e Instagram Ads",
-    "Google Ads e Youtube Ads",
-    "Linkedin Ads",
-    "Tik Tok Ads",
-    "Remarketing",
-    "API de Conversão",
-    "Distribuição de Conteúdo",
-    "Funil de Vendas",
-    "Funil de Pixel",
-    "Campanhas para Lançamentos",
-    "Campanhas para Perpétuo",
-    "Campanhas para Delivery",
-    "Campanhas para Negócios Locais",
-    "Campanhas para Ecommerce",
-    "Captação de Leads",
-    "Tráfego Direto",
-    "Escala de Campanhas",
-    "Contigência de Contas",
-  ];
+export function VoceVaiAprender({ data }) {
+  const lista = data.streaming.map((item) => item.titulo);
 
   return (
     <Flex
@@ -60,7 +39,7 @@ export function VoceVaiAprender() {
           fontFamily="OrkneyMedium"
           textAlign="start"
         >
-          O que você vai aprender na prática
+          {data.titulo}
         </Heading>
         <Stack
           align="center"
@@ -77,16 +56,17 @@ export function VoceVaiAprender() {
             fontSize="13px"
             lineHeight={1}
           >
-            UM STREAMING DE CAMPANHAS REAIS
+            {data.subtitulo}
           </Text>
         </Stack>
-        <Flex pt={4}
+        <Flex
+          pt={4}
           as={List}
           maxW={800}
           w="full"
           flexWrap="wrap"
           flexDir="column"
-          h={{base:'fit-content', md:250}}
+          h={{ base: "fit-content", md: 250 }}
         >
           {lista.map((item) => {
             return (

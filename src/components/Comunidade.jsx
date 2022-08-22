@@ -8,83 +8,11 @@ import {
   HStack,
   Wrap,
 } from "@chakra-ui/react";
-import {
-  FaFilePdf,
-  FaHandshake,
-  FaHouseUser,
-  FaPiggyBank,
-  FaRocketchat,
-  FaSitemap,
-  FaTools,
-  FaUserGraduate,
-  FaUserTie,
-  FaRecordVinyl,
-  FaUsers,
-} from "react-icons/fa";
 
-export function Comunidade() {
-  const lista = [
-    {
-      titulo: "Uma assinatura, todos os cursos",
-      descricao:
-        "Gere economia pagando um único valor mensal para acessar todos os treinamentos e mentorias.",
-      icone: FaPiggyBank,
-    },
-    {
-      titulo: "Mentorias ao Vivo Semanalmente",
-      descricao:
-        "Dentro do próprio plano, sem pagar nada a mais por isso, sem esteira de produtos e sem guruzagem.",
-      icone: FaRecordVinyl,
-    },
+import * as FontAwesome from "react-icons/fa";
 
-    {
-      titulo: "Seja conectado à vagas de emprego",
-      descricao:
-        "Todos os nossos alunos certificados, sem excessão, podem participar do programa de encaminhamento profissional.",
-      icone: FaHandshake,
-    },
-
-    // {
-    //   titulo: "Gestor de Contas Individual",
-    //   descricao:
-    //     "Gere economia pagando um único valor anual para acessar todos os treinamentos. Sem pegadinha.",
-    //   icone: FaUserTie,
-    // },
-
-    // {
-    //   titulo: "Suporte semanal via chat",
-    //   descricao:
-    //     "Todos os nossos alunos certificados, sem excessão, são encaminhados para empresas e startups.",
-    //   icone: FaRocketchat,
-    // },
-
-    {
-      titulo: "Suporte via Comunidade",
-      descricao:
-        "Receba suporte online via whatsapp oficial, além do suporte dos próprios membros da Adschool.",
-      icone: FaRocketchat,
-    },
-
-    {
-      titulo: "Apostilas e Certificações",
-      descricao:
-        "Nós fornecemos apostilas e certificados para a conclusão de todos as formações com mais de 70% de aproveitamento.",
-      icone: FaUserGraduate,
-    },
-    {
-      titulo: "Até 3 usuários ao mesmo tempo",
-      descricao:
-        "Não tá fácil pra ninguém, por isso liberamos até 3 usuários logados ao mesmo tempo por assinatura. Divida com os amigos.",
-      icone: FaUsers,
-    },
-
-    // {
-    //   titulo: "Imersões presenciais",
-    //   descricao:
-    //     "Nossos alunos têm desconto nas nossas imersões e eventos presenciais realizados em todas as capitais do Brasil.",
-    //   icone: FaHouseUser,
-    // },
-  ];
+export function Comunidade({ data }) {
+  const lista = data.vantagens;
 
   return (
     <Flex
@@ -111,8 +39,7 @@ export function Comunidade() {
           fontFamily="OrkneyMedium"
           textAlign="start"
         >
-          Não somos a maior escola de marketing digital do Brasil... e nem
-          queremos
+          {data.titulo}
         </Heading>
         <Stack
           align="center"
@@ -129,7 +56,7 @@ export function Comunidade() {
             fontSize="13px"
             lineHeight={1}
           >
-            NOS PREOCUPAMOS APENAS EM ENTREGAR QUALIDADE
+            {data.subtitulo}
           </Text>
         </Stack>
       </Flex>
@@ -147,7 +74,8 @@ export function Comunidade() {
             spacing={4}
           >
             <HStack spacing={0} h={12}>
-              <item.icone size={60} color="#12DDFF" />
+              {/* <item.icone size={60} color="#12DDFF" /> */}
+              <Icone iconName={item.icone} size={40} color="#12DDFF" />
               <Text
                 dangerouslySetInnerHTML={{ __html: item.titulo }}
                 fontSize="20px"
@@ -156,7 +84,7 @@ export function Comunidade() {
               />
             </HStack>
             <Text lineHeight={1.5} pt={6}>
-              {item.descricao}
+              {item.texto}
             </Text>
           </Flex>
         ))}
@@ -164,3 +92,9 @@ export function Comunidade() {
     </Flex>
   );
 }
+
+export const Icone = (props) => {
+  const { iconName, size, color } = props;
+  const icon = React.createElement(FontAwesome[iconName]);
+  return <div style={{ fontSize: size, color: color }}>{icon}</div>;
+};

@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 
-export function Garantia() {
+export function Garantia({data}) {
   return (
     <Flex
       flexDir="column"
@@ -39,7 +39,7 @@ export function Garantia() {
             fontSize="36px"
             fontFamily="OrkneyMedium"
           >
-            Garantia Incondicional de 14 dias
+            {data.titulo}
           </Heading>
           <Stack
             align="center"
@@ -56,20 +56,18 @@ export function Garantia() {
               fontSize="13px"
               lineHeight={1}
             >
-              MAIS SEGURANÇA E TRANSPARÊNCIA
+              {data.subtitulo}
             </Text>
           </Stack>
           <Text>
-            Teste a qualidade da Adschool Prime à vontade, nós acreditamos muito
-            no nosso propósito de te ensinar e te conectar com as melhores
-            vagas, para mudar a sua vida.
+            {data.texto}
           </Text>
-          <Text>
+          {/* <Text>
             Mas se contudo, você achar que a Adschool não atendeu às suas
             expectativas, ou que não é pra você, basta solicitar reembolso na
             plataforma Green Club, que reembolsaremos todo o seu investimento
             sem enrolação.
-          </Text>
+          </Text> */}
         </VStack>
         <Image
           objectFit="contain"

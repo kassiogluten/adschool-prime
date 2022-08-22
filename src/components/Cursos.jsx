@@ -31,7 +31,7 @@ import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 // import { cursos } from "../components/cursos";
 
-export function Cursos({ cursos }) {
+export function Cursos({ cursos, data}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedCurso, setSelectedCurso] = useState(cursos[0]);
   return (
@@ -59,8 +59,7 @@ export function Cursos({ cursos }) {
           fontWeight={400}
           textAlign="start"
         >
-          Aprenda as ferramentas que te farão criar estratégias e Funis de alta
-          Conversão
+         {data.titulo}
         </Heading>
 
         <Stack
@@ -77,7 +76,7 @@ export function Cursos({ cursos }) {
             fontSize="13px"
             lineHeight={1}
           >
-            UMA ÚNICA ASSINATURA, 6 FORMAÇÕES E TODOS OS TREINAMENTOS
+            {data.subtitulo}
           </Text>
         </Stack>
       </Flex>
@@ -226,7 +225,7 @@ const SideBar = ({ isOpen, onClose, selectedCurso }) => (
   </Drawer>
 );
 
-const Icone = (props) => {
+export const Icone = (props) => {
   const { iconName, size, color } = props;
   const icon = React.createElement(FontAwesome[iconName]);
   return <div style={{ fontSize: size, color: color }}>{icon}</div>;

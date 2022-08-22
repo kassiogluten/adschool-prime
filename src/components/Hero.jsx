@@ -12,7 +12,7 @@ import Image from "next/image";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { useMyContext } from "../contexts/Context";
 
-export function Hero() {
+export function Hero({data}) {
   const { setIsModalOpen } = useMyContext();
   return (
     <Flex
@@ -66,7 +66,7 @@ export function Hero() {
             fontSize="13px"
             lineHeight={1}
           >
-            A ESCOLA DO ESTRATEGISTA DIGITAL #FORAGURU
+            {data.slogan}
           </Text>
         </Stack>
         <Heading
@@ -75,18 +75,15 @@ export function Hero() {
           maxW={800}
           fontSize={{ base: "28px", sm: "48px" }}
         >
-          Ou você aprende a criar a sua própria estratégia, ou vai ser parte da
-          estratégia de alguém
+          {data.titulo}
         </Heading>
         <Text fontFamily="OrkneyRegular" maxW={800} fontSize="16px">
-          Não somos um Info-produto, somos uma Escola. Não te ensinamos a ser
-          milionário, nós formamos Estrategistas Digitais. Não te ensinamos
-          nossas Fórmulas, te ensinamos a Criar as suas.
+          {data.subtitulo}
         </Text>
-        <Text pt={4} fontFamily="OrkneyRegular" maxW={800} fontSize="14px">
+       {/*  <Text pt={4} fontFamily="OrkneyRegular" maxW={800} fontSize="14px">
           Aprenda tudo sobre Estratégia, Funis de Vendas, Tráfego, Copywriting,
           Analytics e CRM em <br /> 6 Formações e mais de 20 Treinamentos.
-        </Text>
+        </Text> */}
 
         <Button
           as="a"

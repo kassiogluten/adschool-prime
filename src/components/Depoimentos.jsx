@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Flex, Heading, Text, Stack } from "@chakra-ui/react";
 import Script from "next/script";
 
-export function Depoimentos() {
+export function Depoimentos({data}) {
   return (
     <Flex
       flexDir="column"
@@ -28,7 +28,7 @@ export function Depoimentos() {
           fontFamily="OrkneyMedium"
           textAlign="start"
         >
-          Depoimentos de pessoas reais
+          {data.titulo}
         </Heading>
         <Stack
           align="center"
@@ -44,7 +44,7 @@ export function Depoimentos() {
             fontSize="13px"
             lineHeight={1}
           >
-            VEJA EM TEMPO REAL O QUE ESTÃO FALANDO DE NÓS
+            {data.subtitulo}
           </Text>
         </Stack>
         

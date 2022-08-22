@@ -1,24 +1,9 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  Heading,
-  Text,
-  Stack,
-  Wrap,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Stack, Wrap } from "@chakra-ui/react";
 import Image from "next/image";
 
-export function Equipe({equipe}) {
-  // const lista = [
-  //   {
-  //     nome: "Paulo Bonfá",
-  //     cargo: "Estrategista Digital e CEO na Adschool e no Crifras Academy",
-  //     foto: "/equipe/Paulo.jpg",
-  //   },
-  // ];
-
-  const lista = equipe.equipe.map((item) => {
+export function Equipe({ data }) {
+  const lista = data.equipe.map((item) => {
     return {
       nome: item.nome,
       cargo: item.cargo,
@@ -51,7 +36,7 @@ export function Equipe({equipe}) {
           fontFamily="OrkneyMedium"
           textAlign="start"
         >
-          Aprenda com quem está no campo de batalha
+          {data.titulo}
         </Heading>
         <Stack
           align="center"
@@ -68,7 +53,7 @@ export function Equipe({equipe}) {
             fontSize="13px"
             lineHeight={1}
           >
-            QUEM VAI TE ENSINAR
+            {data.subtitulo}
           </Text>
         </Stack>
       </Flex>

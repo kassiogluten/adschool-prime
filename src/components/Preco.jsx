@@ -18,7 +18,7 @@ import { FaRegCheckCircle } from "react-icons/fa";
 
 import { useMyContext } from "../contexts/Context";
 
-export function Preco() {
+export function Preco({ data }) {
   const listPlanItems = [
     "Acesso à todas as Formações e Treinamentos",
     "Apostilas Digitais por Formação",
@@ -55,8 +55,7 @@ export function Preco() {
           fontFamily="OrkneyMedium"
           textAlign="start"
         >
-          Não precisa mais vender a sua Mãe por um Treinamento de Marketing
-          Digital
+          {data.titulo}
         </Heading>
         <Stack
           align="center"
@@ -72,65 +71,72 @@ export function Preco() {
             fontSize="13px"
             lineHeight={1}
           >
-            ACREDITAMOS EM ENTREGAR MAIS E COBRAR MENOS
+            {data.subtitulo}
           </Text>
         </Stack>
 
-        <Flex w="full" justify="center" gap={6} flexDirection={{ base: "column", lg: "row" }}>
-          <VStack
-            p={8}
-            w="full"
-            maxW={550}
-            bg="white"
-            borderTopRadius={48}
-            textAlign="center"
-            position="relative"
-            overflow="hidden"
-            color="#666"
-          >
-            <Center p={6} mt={-8} flexDir="column" bg="azul">
-              <Heading fontFamily="OrkneyMedium" fontSize={24} maxW={250}>
-                Plano Mensal
-              </Heading>
-              <Text fontWeight={600} color="black">
-                Sem fidelidade.
-              </Text>
-            </Center>
-           
-            <HStack align="flex-start">
-              <Text fontFamily="OrkneyMedium" pt={4} fontSize="16px">
-                R$
-              </Text>
-              <Text fontFamily="OrkneyBold" fontSize="56px">
-                89
-              </Text>
-              <Text fontFamily="OrkneyBold" pt={4} fontSize="16px">
-                /mês
-              </Text>
-            </HStack>
-            <Text lineHeight={0}>Cancele quando quiser</Text>
-            <List py={6} spacing={4} textAlign="center">
-              {listPlanItems.map((item) => (
-                <ListItem key={item}>
-                  <Divider bg="#555" my={2} w="full" />
-                  <ListIcon as={FaRegCheckCircle} />
-                  {item}
-                </ListItem>
-              ))}
-            </List>
-            <Button
-              onClick={() => setIsModalMensalOpen(true)}
-              my={8}
-              p={10}
-              colorScheme="none"
-              color="white"
-              bgGradient="linear(to-b,  #F79102 0%, #B3450F 100%)"
+        <Flex
+          w="full"
+          justify="center"
+          gap={6}
+          flexDirection={{ base: "column", lg: "row" }}
+        >
+          {data.planos.map((plano) => (
+            <VStack
+              key={plano.titulo}
+              p={8}
+              w="full"
+              maxW={550}
+              bg="white"
+              borderTopRadius={48}
+              textAlign="center"
+              position="relative"
+              overflow="hidden"
+              color="#666"
             >
-              ME INSCREVER
-            </Button>
+              <Center p={6} mt={-8} flexDir="column" bg="azul">
+                <Heading fontFamily="OrkneyMedium" fontSize={24} maxW={250}>
+                  {plano.titulo}
+                </Heading>
+                <Text fontWeight={600} color="black">
+                  {plano.subtitulo}
+                </Text>
+              </Center>
 
-          </VStack>
-          <VStack
+              <HStack align="flex-start">
+                <Text fontFamily="OrkneyMedium" pt={4} fontSize="16px">
+                  R$
+                </Text>
+                <Text fontFamily="OrkneyBold" fontSize="56px">
+                  {plano.valor}
+                </Text>
+                <Text fontFamily="OrkneyBold" pt={4} fontSize="16px">
+                  {plano.periodo}
+                </Text>
+              </HStack>
+              <Text lineHeight={0}>{plano.legenda}</Text>
+              <List py={6} spacing={4} textAlign="center">
+                {listPlanItems.map((item) => (
+                  <ListItem key={item}>
+                    <Divider bg="#555" my={2} w="full" />
+                    <ListIcon as={FaRegCheckCircle} />
+                    {item}
+                  </ListItem>
+                ))}
+              </List>
+              <Button
+                onClick={() => setIsModalMensalOpen(true)}
+                my={8}
+                p={10}
+                colorScheme="none"
+                color="white"
+                bgGradient="linear(to-b,  #F79102 0%, #B3450F 100%)"
+              >
+                ME INSCREVER
+              </Button>
+            </VStack>
+          ))}
+          {/* <VStack
             p={8}
             w="full"
             maxW={550}
@@ -145,11 +151,9 @@ export function Preco() {
               <Heading fontFamily="OrkneyMedium" fontSize={24} maxW={250}>
                 Plano Anual
               </Heading>
-             {/*  <Text fontSize={14} fontWeight={600} color="black">
-              R$469 de Desconto
-              </Text> */}
+              
             </Center>
-            {/* <Text
+            <Text
               transform="rotate(45deg)"
               position="absolute"
               top={6}
@@ -162,7 +166,7 @@ export function Preco() {
               bg="#F79102"
             >
              + POPULAR
-            </Text> */}
+            </Text>
             <HStack align="flex-start">
               <Text fontFamily="OrkneyMedium" pt={4} fontSize="16px">
                 R$
@@ -175,7 +179,6 @@ export function Preco() {
               </Text>
             </HStack>
             <Text lineHeight={0}>ou R$899 à vista</Text>
-            {/* <Text lineHeight={1}>Mensalmente no cartão.</Text> */}
             <List py={6} spacing={4} textAlign="center">
               {listPlanItems.map((item) => (
                 <ListItem key={item}>
@@ -195,8 +198,7 @@ export function Preco() {
             >
               ME INSCREVER
             </Button>
-
-          </VStack>
+          </VStack> */}
         </Flex>
       </Flex>
     </Flex>

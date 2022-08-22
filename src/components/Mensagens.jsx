@@ -9,7 +9,7 @@ import {
   FaQuoteLeft,
 } from "react-icons/fa";
 
-export function Mensagens() {
+export function Mensagens({data}) {
   return (
     <Flex
       flexDir="column"
@@ -35,8 +35,7 @@ export function Mensagens() {
           fontFamily="OrkneyMedium"
           textAlign="start"
         >
-          Em alguns anos vão existir dois tipos de empresas: as que vendem pela
-          internet e as que estão fora dos negócios
+          {data.mensagem}
         </Heading>
         <Divider my={8} w={50} />
         <Text fontFamily="OrkneyBold" color="azul">
@@ -46,19 +45,15 @@ export function Mensagens() {
           Microsoft
         </Text>
         <Text pt={6} fontSize="14px" color="cinza">
-          Facebook, Instagram, Twitter, Linkedin, Tik Tok, Google, Youtube…
-          Essas plataformas oferecem muito mais que entretenimento. Dentro delas
-          estão oportunidades de negócios milionários. E existem empresas que
-          pagam muito caro por profissionais que dominam essas ferramentas
-          digitais.
+         {data.texto}
         </Text>
-        <Text pt={6} fontSize="14px" color="cinza">
+        {/* <Text pt={6} fontSize="14px" color="cinza">
           Dentro do Adschool Prime, nossa plataforma digital e-Learning, você
           vai aprender na prática como dominar as ferramentas tráfego, análise
           de dados e marketing de performance, elém de dominar as principais
           estratégias: lançamentos, perpétuo, e-commerce, negócios locais,
           deliverys, e qualquer funil de venda que deseje.
-        </Text>
+        </Text> */}
       </Flex>
     </Flex>
   );

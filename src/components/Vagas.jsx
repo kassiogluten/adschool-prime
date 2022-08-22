@@ -16,56 +16,8 @@ import {
   FaUserTie,
 } from "react-icons/fa";
 
-export function Vagas() {
-  const lista = [
-    {
-      titulo: "Analista de Mídia: Cifras Academy",
-      vaga: "Sênior",
-      salario: "4.235",
-      tipo: "PJ",
-      local: "Remoto",
-    },
-
-    {
-      titulo: "Head de Tráfego: Cifras Academy",
-      vaga: "Sênior",
-      salario: "6.000",
-      tipo: "PJ",
-      local: "Remoto",
-    },
-
-    {
-      titulo: "Analista Google Ads: Leadline Brasil",
-      vaga: "Júnior",
-      salario: "2.000",
-      tipo: "CLT",
-      local: "Presencial",
-    },
-
-    {
-      titulo: "Gestor de Tráfego: Leadline Brasil",
-      vaga: "Sênior",
-      salario: "4.000",
-      tipo: "PJ",
-      local: "Remoto",
-    },
-
-    {
-      titulo: "Analista de Demanda: Faculdade Famart",
-      vaga: "Sênior",
-      salario: "5.325",
-      tipo: "PJ",
-      local: "Remoto",
-    },
-
-    {
-      titulo: "Especialista em Ecommerce: Adschool",
-      vaga: "Júnior",
-      salario: "3.000",
-      tipo: "CLT",
-      local: "Presencial",
-    },
-  ];
+export function Vagas({ data }) {
+  const lista = data.listarVagas;
 
   return (
     <Flex
@@ -92,7 +44,7 @@ export function Vagas() {
           fontFamily="OrkneyMedium"
           textAlign="start"
         >
-          Nós conectamos você com vagas em grandes startups
+          {data.titulo}
         </Heading>
         <Stack
           align="center"
@@ -109,7 +61,7 @@ export function Vagas() {
             fontSize="13px"
             lineHeight={1}
           >
-            VAGAS PARA ESTRATEGISTAS DE PERFORMANCE
+            {data.subtitulo}
           </Text>
         </Stack>
         {/* <Text textAlign="start" pt={6} fontSize="14px" color="cinza">
@@ -137,7 +89,7 @@ export function Vagas() {
             <HStack spacing={0} h={12}>
               <FaRegHandshake size={80} color="#12DDFF" />
               <Text
-                dangerouslySetInnerHTML={{ __html: item.titulo }}
+                dangerouslySetInnerHTML={{ __html: item.nome }}
                 fontSize="20px"
                 fontFamily="OrkneyMedium"
                 fontWeight={600}
@@ -147,7 +99,7 @@ export function Vagas() {
             <Flex flexWrap="wrap" w="full" mt={8} flexDirection="column" h={12}>
               <HStack pb={4} w="45%">
                 <FaUserTie color="#F7B500" />
-                <Text>{item.vaga}</Text>
+                <Text>{item.nivel}</Text>
               </HStack>
               <HStack w="45%">
                 <FaMoneyBill color="#F7B500" />
@@ -155,7 +107,7 @@ export function Vagas() {
               </HStack>
               <HStack pb={4} w="45%">
                 <FaAddressCard color="#F7B500" />
-                <Text>{item.tipo}</Text>
+                <Text>{item.regime}</Text>
               </HStack>
               <HStack w="45%">
                 <FaDesktop color="#F7B500" />
