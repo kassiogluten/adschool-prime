@@ -25,6 +25,5 @@ export function useFetch(url, options, reRender) {
   useEffect(() => {
     get();
   }, []);
-  console.log("wp api", data);
   return { data, error, isFetching, get };
 }

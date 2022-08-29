@@ -38,8 +38,6 @@ export function CursosPreview() {
   const [cursos, setCursos] = useState([]);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedCurso, setSelectedCurso] = useState({});
-  // console.log("selectedCurso", selectedCurso);
-  console.log("cursos", cursos);
 
   useEffect(() => {
     const fetchProducts = async () => {

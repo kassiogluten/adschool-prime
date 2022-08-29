@@ -64,7 +64,6 @@ export const Formulario = () => {
           } else {
             alert(data.erro || "Erro, não foi possível fazer sua inscrição");
           }
-          console.log(data);
         });
     } catch (err) {
       alert(err.erro || "Erro, não foi possível fazer sua inscrição");

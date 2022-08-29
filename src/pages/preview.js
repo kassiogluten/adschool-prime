@@ -22,8 +22,6 @@ import { gql } from "@apollo/client";
 import { useEffect, useState } from "react";
 
 export default function Home({ cursos, wpData }) {
-  console.log(wpData);
-  // console.log(cursos);
   return (
     <>
       <Head>

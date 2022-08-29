@@ -134,13 +134,11 @@ export default function Home({ cursos }) {
       });
       setWpData(response.data.lp.configuracoesLp);
       setLoading(false);
-      console.log(response);
     };
 
     fetchWpData();
   }, []);
 
-  console.log(wpData);
   if (loading || !wpData)
     return (
       <Center h="100vh">

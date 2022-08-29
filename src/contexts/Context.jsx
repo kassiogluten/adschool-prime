@@ -4,6 +4,7 @@ const Context = createContext();
 export function ContextProvider({ children }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalMensalOpen, setIsModalMensalOpen] = useState(false);
+  const [activeCampain, setActiveCampain] = useState(false);
 
   return (
     <Context.Provider
@@ -12,6 +13,8 @@ export function ContextProvider({ children }) {
         setIsModalOpen,
         isModalMensalOpen,
         setIsModalMensalOpen,
+        activeCampain,
+        setActiveCampain
       }}
     >
       {children}

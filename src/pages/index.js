@@ -20,9 +20,14 @@ import { Box } from "@chakra-ui/react";
 import { getApolloClient } from "../utils/apollo-client";
 import { gql } from "@apollo/client";
 import { useEffect, useState } from "react";
+import { useMyContext } from "../contexts/Context";
 
 export default function Home({ cursos, wpData }) {
-  console.log(wpData);
+  const { setActiveCampain } = useMyContext();
+
+  useEffect(() => {
+    setActiveCampain(wpData.sessao8.planos[0].activeCampain);
+  }, [wpData]);
   // console.log(cursos);
   return (
     <>
@@ -43,19 +48,19 @@ export default function Home({ cursos, wpData }) {
           async=""
         ></script> */}
       </Head>
-      <Hero data={wpData.sessao1}/>
+      <Hero data={wpData.sessao1} />
       <Cursos data={wpData.sessao2} cursos={cursos} />
       <CTA />
-      <Mensagens data={wpData.sessao3}/>
-      <VoceVaiAprender data={wpData.sessao4}/>
+      <Mensagens data={wpData.sessao3} />
+      <VoceVaiAprender data={wpData.sessao4} />
       <CTA />
-      <Vagas data={wpData.sessao5}/>
+      <Vagas data={wpData.sessao5} />
       <CTA />
       <Equipe data={wpData.sessao6} />
       <Comunidade data={wpData.sessao7} />
-      <Preco data={wpData.sessao8}/>
-      <Garantia data={wpData.sessao9}/>
-      <Depoimentos data={wpData.sessao10}/>
+      <Preco data={wpData.sessao8} />
+      <Garantia data={wpData.sessao9} />
+      <Depoimentos data={wpData.sessao10} />
       <CTA />
 
       <Footer />
@@ -177,6 +182,7 @@ export const getStaticProps = async () => {
                 subtitulo
                 titulo
                 valor
+                activeCampain
               }
             }
             sessao10 {
