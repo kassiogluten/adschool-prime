@@ -79,6 +79,7 @@ export const getServerSideProps = async () => {
               }
               horas
               icone
+              iconetb
               video
             }
             date

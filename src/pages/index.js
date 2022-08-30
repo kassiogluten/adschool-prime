@@ -86,6 +86,7 @@ export const getStaticProps = async () => {
               }
               horas
               icone
+              iconetb
               video
             }
             date

@@ -24,6 +24,7 @@ import {
 
 import * as Icon from "react-icons/fa";
 import * as FontAwesome from "react-icons/fa";
+import * as Tabler from "react-icons/tb";
 
 import { CTA } from "./CTA";
 
@@ -31,7 +32,7 @@ import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 // import { cursos } from "../components/cursos";
 
-export function Cursos({ cursos, data}) {
+export function Cursos({ cursos, data }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedCurso, setSelectedCurso] = useState(cursos[0]);
   return (
@@ -59,7 +60,7 @@ export function Cursos({ cursos, data}) {
           fontWeight={400}
           textAlign="start"
         >
-         {data.titulo}
+          {data.titulo}
         </Heading>
 
         <Stack
@@ -95,11 +96,20 @@ export function Cursos({ cursos, data}) {
                 key={curso.cursoYId}
               >
                 <HStack align="flex-start">
-                  <Icone
-                    iconName={curso.curso.icone}
-                    size={50}
-                    color="#12DDFF"
-                  />
+                  {curso.curso.icone && (
+                    <Icone
+                      iconName={curso.curso.icone}
+                      size={50}
+                      color="#12DDFF"
+                    />
+                  )}
+                  {curso.curso.iconetb && (
+                    <Iconetb
+                      iconName={curso.curso.iconetb}
+                      size={50}
+                      color="#12DDFF"
+                    />
+                  )}
 
                   <Box
                     dangerouslySetInnerHTML={{
@@ -228,5 +238,11 @@ const SideBar = ({ isOpen, onClose, selectedCurso }) => (
 export const Icone = (props) => {
   const { iconName, size, color } = props;
   const icon = React.createElement(FontAwesome[iconName]);
+  return <div style={{ fontSize: size, color: color }}>{icon}</div>;
+};
+
+export const Iconetb = (props) => {
+  const { iconName, size, color } = props;
+  const icon = React.createElement(Tabler[iconName]);
   return <div style={{ fontSize: size, color: color }}>{icon}</div>;
 };

@@ -20,7 +20,7 @@ import { FaRegCheckCircle } from "react-icons/fa";
 import { useMyContext } from "../contexts/Context";
 
 export function Preco({ data }) {
-  console.log({data})
+  console.log({ data });
   const listPlanItems = [
     "Acesso à todas as Formações e Treinamentos",
     "Apostilas Digitais por Formação",
@@ -132,7 +132,7 @@ export function Preco({ data }) {
                 p={10}
                 colorScheme="none"
                 color="white"
-                bgGradient="linear(to-b,  #F79102 0%, #B3450F 100%)"
+                bgGradient="linear(to-b, #F79102 0%, #B3450F 100%)"
                 marginTop="auto"
               >
                 ME INSCREVER
