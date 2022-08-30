@@ -13,12 +13,14 @@ import {
   Divider,
   Button,
   Center,
+  Spacer,
 } from "@chakra-ui/react";
 import { FaRegCheckCircle } from "react-icons/fa";
 
 import { useMyContext } from "../contexts/Context";
 
 export function Preco({ data }) {
+  console.log({data})
   const listPlanItems = [
     "Acesso à todas as Formações e Treinamentos",
     "Apostilas Digitais por Formação",
@@ -115,12 +117,12 @@ export function Preco({ data }) {
                 </Text>
               </HStack>
               <Text lineHeight={0}>{plano.legenda}</Text>
-              <List py={6} spacing={4} textAlign="center">
-                {listPlanItems.map((item) => (
+              <List h="full" py={6} spacing={4} textAlign="center">
+                {plano.conteudo.map((item) => (
                   <ListItem key={item}>
                     <Divider bg="#555" my={2} w="full" />
                     <ListIcon as={FaRegCheckCircle} />
-                    {item}
+                    {item.titulo}
                   </ListItem>
                 ))}
               </List>
@@ -131,6 +133,7 @@ export function Preco({ data }) {
                 colorScheme="none"
                 color="white"
                 bgGradient="linear(to-b,  #F79102 0%, #B3450F 100%)"
+                marginTop="auto"
               >
                 ME INSCREVER
               </Button>
