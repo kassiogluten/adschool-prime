@@ -1,7 +1,7 @@
 import { background, extendTheme } from "@chakra-ui/react";
 
 export const theme = extendTheme({
-  initialColorMode: "dark",
+  initialColorMode: "light",
   useSystemColorMode: false,
   fonts: {
     heading: "OrkneyBold, no-serif",
