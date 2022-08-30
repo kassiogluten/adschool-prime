@@ -20,8 +20,13 @@ import { Box } from "@chakra-ui/react";
 import { getApolloClient } from "../utils/apollo-client";
 import { gql } from "@apollo/client";
 import { useEffect, useState } from "react";
+import { useMyContext } from "../contexts/Context";
 
 export default function Home({ cursos, wpData }) {
+  const { setActiveCampain } = useMyContext();
+  useEffect(() => {
+    setActiveCampain(wpData.sessao8.planos[0].activeCampain);
+  }, [wpData]);
   return (
     <>
       <Head>
@@ -176,6 +181,7 @@ export const getServerSideProps = async () => {
                 subtitulo
                 titulo
                 valor
+                activeCampain
               }
             }
             sessao10 {
