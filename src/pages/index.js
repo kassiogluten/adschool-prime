@@ -184,6 +184,7 @@ export const getStaticProps = async () => {
                 titulo
                 valor
                 activeCampain
+                link
               }
             }
             sessao10 {

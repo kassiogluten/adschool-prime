@@ -18,6 +18,7 @@ import {
 import { FaRegCheckCircle } from "react-icons/fa";
 
 import { useMyContext } from "../contexts/Context";
+import Link from "next/link";
 
 export function Preco({ data }) {
   console.log({ data });
@@ -126,17 +127,21 @@ export function Preco({ data }) {
                   </ListItem>
                 ))}
               </List>
-              <Button
-                onClick={() => setIsModalMensalOpen(true)}
-                my={8}
-                p={10}
-                colorScheme="none"
-                color="white"
-                bgGradient="linear(to-b, #F79102 0%, #B3450F 100%)"
-                marginTop="auto"
-              >
-                ME INSCREVER
-              </Button>
+              <Link href={plano?.link || "#"} passHref>
+                <a>
+                  <Button
+                    // onClick={() => setIsModalMensalOpen(true)}
+                    my={8}
+                    p={10}
+                    colorScheme="none"
+                    color="white"
+                    bgGradient="linear(to-b, #F79102 0%, #B3450F 100%)"
+                    marginTop="auto"
+                  >
+                    ME INSCREVER
+                  </Button>
+                </a>
+              </Link>
             </VStack>
           ))}
           {/* <VStack
