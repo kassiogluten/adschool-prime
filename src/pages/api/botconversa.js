@@ -37,7 +37,8 @@ export default async function handler(req, res) {
       name: "07",
     },
   ];
-  const flow = flows.find((item) => item.name === queryFlow).id;
+  // const flow = flows.find((item) => item.name === queryFlow).id;
+  const flow = queryFlow;
 
   const phone = `+55${request["contact[phone]"]}`;
   const formatedReq = {
