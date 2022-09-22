@@ -43,7 +43,7 @@ export default async function handler(req, res) {
   const formatedReq = {
     phone,
     first_name: request["contact[first_name]"],
-    last_name: request["contact[last]"],
+    last_name: request["contact[last_name]"],
   };
 
   async function enviarFluxo(id) {
@@ -53,7 +53,7 @@ export default async function handler(req, res) {
         const response = await botconversaApi.post(
           `subscriber/${id}/send_flow/`,
           {
-            flow: "521295",
+            flow,
           }
         );
         console.log("### RESPONSE", response?.data);
@@ -85,6 +85,7 @@ export default async function handler(req, res) {
     console.log("### cadastraNoBotConversa");
     try {
       const response = await botconversaApi.post("subscriber/", formatedReq);
+      console.log("### formatedReq", formatedReq);
       console.log("RESPONSE", response?.data);
       verificarSeExisteNoBotConversa();
     } catch (err) {
