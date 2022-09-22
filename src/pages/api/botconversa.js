@@ -94,6 +94,11 @@ export default async function handler(req, res) {
       res.status(400).send(err);
     }
   }
-
+  if (req.method === "GET")
+    return res
+      .status(404)
+      .send(
+        "Webhook ativo e funcionando, cole o link na automação do ActiveCampain, verifique se os dados do Lead estão corretos, telefone com DDD + 9 dígitos"
+      );
   await verificarSeExisteNoBotConversa();
 }
