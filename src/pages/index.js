@@ -48,19 +48,23 @@ export default function Home({ cursos, wpData }) {
           async=""
         ></script> */}
       </Head>
-      <Hero data={wpData.sessao1} />
-      <Cursos data={wpData.sessao2} cursos={cursos} />
+      {wpData.sessao1 && <Hero data={wpData.sessao1} />}
+      {wpData.sessao2 && <Cursos data={wpData.sessao2} cursos={cursos} />}
       <CTA />
-      <Mensagens data={wpData.sessao3} />
-      <VoceVaiAprender data={wpData.sessao4} />
+      {wpData.sessao3 && <Mensagens data={wpData.sessao3} />}
+      {wpData.sessao4 && <VoceVaiAprender data={wpData.sessao4} />}
       <CTA />
-      <Vagas data={wpData.sessao5} />
-      <CTA />
-      <Equipe data={wpData.sessao6} />
-      <Comunidade data={wpData.sessao7} />
-      <Preco data={wpData.sessao8} />
-      <Garantia data={wpData.sessao9} />
-      <Depoimentos data={wpData.sessao10} />
+      {wpData.sessao5 && (
+        <>
+          <Vagas data={wpData.sessao5} />
+          <CTA />
+        </>
+      )}
+      {wpData.sessao6 && <Equipe data={wpData.sessao6} />}
+      {wpData.sessao7 && <Comunidade data={wpData.sessao7} />}
+      {wpData.sessao8 && <Preco data={wpData.sessao8} />}
+      {wpData.sessao9 && <Garantia data={wpData.sessao9} />}
+      {wpData.sessao10 && <Depoimentos data={wpData.sessao10} />}
       <CTA />
 
       <Footer />
@@ -124,30 +128,12 @@ export const getStaticProps = async () => {
                 video
               }
             }
-            sessao3 {
-              fieldGroupName
-              mensagem
-              texto
-            }
             sessao4 {
               streaming {
                 titulo
               }
               subtitulo
               titulo
-            }
-            sessao5 {
-              subtitulo
-              titulo
-              listarVagas {
-                local
-                nivel
-                nome
-                regime
-                salario
-                fieldGroupName
-              }
-              fieldGroupName
             }
             sessao6 {
               equipe {
@@ -161,15 +147,6 @@ export const getStaticProps = async () => {
               titulo
               subtitulo
               fieldGroupName
-            }
-            sessao7 {
-              subtitulo
-              titulo
-              vantagens {
-                icone
-                texto
-                titulo
-              }
             }
             sessao8 {
               titulo
@@ -192,22 +169,17 @@ export const getStaticProps = async () => {
               subtitulo
               titulo
             }
-            sessao9 {
-              fieldGroupName
-              subtitulo
-              texto
-              titulo
-            }
           }
         }
       }
     `,
   });
 
+  console.log("root wp data", wpData);
   return {
     props: {
       cursos: data.data.cursosY.nodes,
-      wpData: wpData.data.lp.configuracoesLp,
+      wpData: wpData?.data?.lp?.configuracoesLp || null,
     },
     revalidate: 60 * 60 * 1, //1 hour
   };
