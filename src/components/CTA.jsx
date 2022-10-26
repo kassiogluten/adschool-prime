@@ -5,7 +5,8 @@ import { useMyContext } from "../contexts/Context";
 import { Formulario } from "./Formulario2";
 import { FormularioMensal } from "./FormularioMensal";
 
-export function CTA() {
+export function CTA({ data }) {
+  console.log({ dataCTA: data });
   return (
     <Flex
       flexDir="column"
@@ -18,7 +19,7 @@ export function CTA() {
     >
       <Button
         as="a"
-        href="#planos"
+        href={data?.url || "#planos"}
         variant="outline"
         _hover={{ borderColor: "amarelo" }}
         color="amarelo"
@@ -28,7 +29,7 @@ export function CTA() {
         rightIcon={<FaLongArrowAltRight />}
       >
         <Text pr={2} pt={1}>
-          ME INSCREVER
+          {data?.nome || "ME INSCREVER"}
         </Text>
       </Button>
       <Formulario />

@@ -12,7 +12,7 @@ import Image from "next/image";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { useMyContext } from "../contexts/Context";
 
-export function Hero({data}) {
+export function Hero({ data }) {
   const { setIsModalOpen } = useMyContext();
   return (
     <Flex
@@ -80,7 +80,7 @@ export function Hero({data}) {
         <Text fontFamily="OrkneyRegular" maxW={800} fontSize="16px">
           {data.subtitulo}
         </Text>
-       {/*  <Text pt={4} fontFamily="OrkneyRegular" maxW={800} fontSize="14px">
+        {/*  <Text pt={4} fontFamily="OrkneyRegular" maxW={800} fontSize="14px">
           Aprenda tudo sobre Estratégia, Funis de Vendas, Tráfego, Copywriting,
           Analytics e CRM em <br /> 6 Formações e mais de 20 Treinamentos.
         </Text> */}
@@ -99,6 +99,22 @@ export function Hero({data}) {
         >
           <Text pr={2} pt={1}>
             FAZER INSCRIÇÃO
+          </Text>
+        </Button>
+        <Button
+          variant="ghost"
+          as="a"
+          href="https://adschool.cademi.com.br/"
+          mt={2}
+          _hover={{ color: "azul" }}
+          color="white"
+          w={225}
+          fontWeight={400}
+          fontFamily="OrkneyRegular"
+          rightIcon={<FaLongArrowAltRight />}
+        >
+          <Text pr={2} pt={1}>
+            Já sou aluno
           </Text>
         </Button>
       </Flex>

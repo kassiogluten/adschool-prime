@@ -50,7 +50,7 @@ export default function Home({ cursos, wpData }) {
       </Head>
       {wpData.sessao1 && <Hero data={wpData.sessao1} />}
       {wpData.sessao2 && <Cursos data={wpData.sessao2} cursos={cursos} />}
-      <CTA />
+      <CTA data={wpData.sessao2.callToAction} />
       {wpData.sessao3 && <Mensagens data={wpData.sessao3} />}
       {wpData.sessao4 && <VoceVaiAprender data={wpData.sessao4} />}
       <CTA />
@@ -126,6 +126,10 @@ export const getStaticProps = async () => {
                 horas
                 icone
                 video
+              }
+              callToAction {
+                url
+                nome
               }
             }
             sessao4 {
